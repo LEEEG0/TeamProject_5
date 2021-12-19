@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>마이페이지</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<style type="text/css">
+
+	*{
+		font-family: 'Noto Sans KR', sans-serif;
+		margin: 0;
+		padding: 0;	
+     	box-sizing: border-box;
+	}
+
+	        html{
+        position: relative;
+        min-height: 100%;
+        margin: 0;
+    }
+
+    body{
+        min-height: 100%;
+    }
+
+
+	.container{
+	  width:1200px;
+	  height:400px;
+	  margin : auto;
+	}
+	.section
+
+	{
+	    width:900px;
+	    height:600px;
+	    margin: 0 auto;
+		 
+	  .trbody{
+	    width 900px;
+	  }
+    .graph{ 
+      width:1273px;
+      hieght:589px;}
+  
+    #bar-graph {
+        border-collapse: collapse;
+        margin: 0 auto;
+        max-width: 850px;
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    #bar-graph tr th,
+    #bar-graph tr td {
+        border-bottom: 1px solid #E7E7E7;
+        padding: 10px;
+    }
+
+    #bar-graph tbody tr th {
+        text-align: left;
+    }
+
+    #bar-graph thead tr th,
+    #bar-graph tbody tr td {
+        text-align: right;
+    }
+
+    #bar-ticks {
+        display: none;
+    	}
+
+	}
+
+	#bar-graph {
+        background: transparent;
+        display: block;
+        height: 300px;
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        width: 1200px;
+    }
+
+    #bar-graph caption {
+        caption-side: top;
+        font-size: 15x;
+        letter-spacing: .5px;
+        position: absolute;
+        text-align: left;
+        top: -80px;
+        width: 1200px;
+        z-index: 10;
+    }
+
+    #bar-graph tr, #bar-graph th, #bar-graph td {
+        bottom: 3px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        text-align: center;
+        width: 140px;
+        z-index: 2;
+    }
+
+    #bar-graph td { transition: all .3s ease; }
+    #bar-graph td:hover {
+        background-color: #0084FF !important;
+        color: white;
+    }
+
+    #bar-graph thead tr {
+        bottom: auto;
+        right: 0;
+        top: -46px;
+    }
+
+    #bar-graph thead th {
+        height: auto;
+        font-weight: 400;
+        padding: 0;
+        width: auto;
+    }
+
+    #bar-graph thead th.before {
+        line-height: 2;
+        right: 80px;
+    }
+    #bar-graph thead th.after {
+        line-height: 2;
+        right: 12px;
+    }
+    #bar-graph thead th.before:after,
+    #bar-graph thead th.after:after {
+        content: '';
+        height: 10px;
+        left: -15px;
+        position: absolute;
+        top: 10px;
+        width: 10px;
+    }
+    #bar-graph thead th.before:after { background: #E7E7E7; }
+    #bar-graph thead th.after:after { background: #C1C1C1; }
+
+    #bar-graph tbody tr {
+        height: 296px;
+        padding-top: 2px;
+    }
+
+    #bar-graph #section-1 { left: 120px; }
+    #bar-graph #section-1 .before { height: 280px; }
+    #bar-graph #section-1 .after { height: 78px; }
+
+    #bar-graph #section-2 { left: 280px; }
+    #bar-graph #section-2 .before { height: 215px; }
+    #bar-graph #section-2 .after { height: 90px; }
+
+    #bar-graph #section-3 { left: 440px; }
+    #bar-graph #section-3 .before { height: 285px; }
+    #bar-graph #section-3 .after { height: 85px; }
+  
+    #bar-graph #section-4 { left: 600px; }
+    #bar-graph #section-4 .before { height: 235px; }
+    #bar-graph #section-4 .after { height: 115px; }
+  
+    #bar-graph #section-5 { left: 760px; }
+    #bar-graph #section-5 .before { height: 235px; }
+    #bar-graph #section-5 .after { height: 115px; }
+  
+    #bar-graph #section-6 { left: 920px; }
+    #bar-graph #section-6 .before { height: 235px; }
+    #bar-graph #section-6 .after { height: 115px; }
+
+    #bar-graph tbody th {
+        bottom: -1.75em;
+        font-weight: normal;
+        vertical-align: top;
+    }
+
+    #bar-graph .bar {
+        border-bottom: none;
+        border: 1px solid;
+        color: #000;
+        width: 28px;
+    }
+    #bar-graph .bar p { margin: 5px 0 0; padding: 0; }
+
+    #bar-graph tbody {
+        display: block;
+        height: 340px;
+    }
+
+    #bar-graph tbody .before {
+        background-color: #4BA8FF;
+        border-color: transparent;
+        left: 40px;
+    }
+
+    #bar-graph tbody .after {
+        background-color: #E0E0E0;
+        border-color: transparent;
+        left: 75px;
+    }
+
+    #bar-ticks {
+        display: block;
+        height: 300px;
+        left: 0;
+        margin-bottom: 100px;
+        position: relative;
+        top: -300px;
+        width: 1200px;
+        z-index: 1;
+        margin: 0 auto;
+    }
+
+    #bar-ticks .tick {
+        margin: auto;
+        border-bottom: 1px solid #E7E7E7;
+        height: 59px;
+        position: relative;
+        width: 1130px;
+    }
+    #bar-ticks .tick:first-child {
+        border-top: 1px solid #E7E7E7;
+    }
+    #bar-ticks .tick:last-child {
+        border: 0;
+    }
+
+    #bar-ticks .tick p {
+        color: #A3A3A3;
+        left: -3em;
+        margin: 0 0 0 0.5em;
+        position: absolute;
+        top: -0.8em;
+        font-size:12px;
+    	}
+
+	}
+
+
+		hr {
+		    background: transparent;
+		    border: 0;
+		    height: 10em;
+		    width: 100%;
+		}
+
+
+
+
+		.table_title{
+			width: 1193px;
+			text-align: left;
+			margin:145px auto 30px auto;
+		}
+
+/*표 시작*/
+
+		.table_title{
+			width: 1193px;
+			text-align: left;
+			margin:145px auto 20px auto;
+		}
+		.table_title h1{
+				font-size: 36px;
+				font-weight: 500;
+    			margin-bottom:40px;
+    			width: auto;
+    			height: 50px;
+    			display:flex;
+
+		}
+
+		button{
+			width: 144px;
+			height: 49px;
+			text-align: center;
+			background-color: #F5F5F5;
+			color: #3399FF;
+			border: none;
+			font-size: 18px;
+		}
+
+		button {cursor: pointer;}
+
+		button:hover{
+			background-color: #3399FF;
+			color: #fff;
+		}
+
+		.btn2{
+			width: 144px;
+			height: 49px;
+			text-align: center;
+			background-color: #3399FF;
+			color: white;
+			border: none;
+			font-size: 18px;
+		}
+		
+		table {
+	    	border-spacing: 0px;
+	   		border-style: none;
+	  		padding: 0px;
+	  		width: 1193px;
+	  		margin: auto;
+			}
+
+		td {
+  			border-spacing: 0px;
+   		 	border-style: none;
+   		 	padding: 0px;
+   		}
+
+
+		/*표 감싸는 div*/
+		.board_list_wrap{
+			
+		margin-bottom: 400px;
+		}
+		/*표*/
+		.board_list{
+				width: 1193px;
+				font-size: 18px;
+      margin-bottom:107px;
+		}
+
+		.board_list th{
+
+			padding: 23px 10px 23px 10px;
+			background-color:#3399FF;
+			color: white;
+      font-size: 18px;
+
+		}
+		.board_list td{
+			padding: 28px 10px 28px 10px;
+			border-bottom: 1px solid #757575; 
+			text-align: center;
+		}
+		.board_list td h1{
+			font-size: 14px;
+			font-weight: 300;
+		}
+		.board_list td h2{
+			font-size: 18px;
+			font-weight: 700;
+		}
+		.board_list img {
+			width: 170px;
+			height: 100px;
+			border-radius: 5px;
+		}
+		.program{
+			height:100px;
+			width:368px;
+			display: flex;
+			align-items:center;
+			text-align: left;
+			margin: auto;
+		}
+		.content{
+			margin-left: 20px;
+		}
+
+
+		/*아까하던거*/
+
+ header{
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		background-color: #fff;
+    		height: 100px;
+            box-shadow: 0 4px 16px -4px #dddddd ;
+    	}
+    	nav{
+    		display: flex;
+    		justify-content: space-between;
+    		width: 1194px;
+
+    	}
+    	.logo{
+    		width: 90px;
+    		height: 60px;
+    		display: flex;
+    		margin-left:0px;
+    		display: flex;
+    		justify-content: space-between;
+    	}
+    	.menu{
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		text-decoration: none;
+            margin-right: 0px;
+    	}
+    	.menu li{
+    		list-style: none;
+			font-weight: medium;
+    	}
+    	.menu li a{
+    		text-decoration: none;
+    		margin-left: 30px;
+    		color: black;
+    	   padding-bottom: 4px;
+        }
+    	.menu li a:hover{
+    		color: #3399FF;
+            border-bottom: 2px solid #3399FF;
+        }
+
+    	/*--------------------------------------------------------------*/
+
+		.profile{
+		  margin-left: auto;
+		  margin-right: auto;
+		  margin-top:64px;
+		  margin-bottom:102px;
+		  width:1194px;
+		  height: 400px;
+
+		  position: relative;
+		   border:1px solid #C4C4C4;
+		}
+		   
+
+
+		.profile1{
+		  display:flex;
+
+		  width:288px;
+		  height: 400px;
+		  position: absolute;
+		  flex-direction:column;
+		}
+		.profile2{
+		  width: 512px;
+		  height: 400px;
+		  position: absolute;
+		  margin-left: 288px;
+		  align-items:center;
+		  border-left: solid 1px #BDBDBD;
+		}
+		.profile3{
+		  border-left: solid 1px #BDBDBD;
+		  width:394px;
+		  height: 400px;
+		  position: absolute;
+		  margin-left: 800px;
+		  display:flex;
+		  align-items:center;
+		  justify-content:center;
+		  flex-direction:column;
+		 }
+
+		.club{
+			width: 500px;
+			height: 348px;
+
+			
+		}
+		.study{
+			width: 500px;
+			height: 348px;
+
+		}
+		.my_container{
+			display: flex;
+			justify-content:space-between;
+			width: 1200px;
+			height: 348px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 146px;
+		}
+
+		.circle{
+		  margin-left:auto;
+		  margin-right:auto;
+		  margin-top: 46px;
+		  height: 182px;
+		  width: 182px;
+		  background-color: #bbb;
+		  border-radius: 50%;
+		  display: inline-block;
+		  background-image: url(https://i.postimg.cc/hjTB4sPg/image.jpg);
+		  background-size:cover;
+		}
+		.profile_text{
+		  display:flex;
+		  width:288px;
+		  height:156px;
+		  font-size:16px;
+
+		  align-items:center;
+		  justify-content:center;
+		  text-align:left;
+		}
+
+		.bookmark h1{
+		  font-size:24px;
+		  margin-top:27px;
+		  margin-bottom:30px;
+		  display:flex;
+  		  align-items:center;
+		}
+
+		.plus{
+			display:flex;
+			  align-items:center;
+			  justify-content:center;
+			  width:41px;
+			  height:52px;
+			  margin-left:260px;
+		}
+
+		.profile3 h1{
+		  font-size:24px;
+		  
+		  width:343px;
+		  height:50px;
+		}
+
+		.bookmark{
+		  margin:20px;
+		  width:464px;
+		  height:291px;
+		  position: absolute;
+
+		}
+
+		.bookmark_text{
+		  display:flex;
+		  width:446px;
+		  height:52px;
+		  margin-top:16px;
+		  margin-bottom:16px;
+		}
+
+		.text_title{
+		  font-size:18px;
+		}
+
+		.sub_title{
+		  font-size:14px;
+		}
+
+		.arrow{
+		  display:flex;
+		  align-items:center;
+		  justify-content:center;
+		  width:41px;
+		  height:52px;
+		}
+
+		.arrow img{
+		  display:flex;
+		  width:14px;
+		  height:14px;
+		}
+
+		.text_box{
+		  width:406px;
+		  hiehgt:52px;
+		  display:flex;
+		  flex-direction:column;
+		}
+
+		.tippoint{
+		  display:flex;
+		  width:343px;
+		  height:258px;
+
+		  align-items:center;
+		  justify-content:space-between;
+		}
+
+		.circle_text{
+		  font-size:14px;
+		  margin-bottom:10px;
+		  text-align:center;
+		}
+		.circle2{
+		  display:flex;
+		background-color:fff;
+		border:4px #4BA8FF solid;
+		width:100px;
+		height:100px;
+		-webkit-border-radius:100px;
+		-moz-borer-radius:100px;
+		align-items:center;
+		justify-content:center;
+		  font-size:24px;
+		  font-weight:bold;
+		}
+
+		.circle_container{
+		  width:100px;
+		  height:138px;
+
+		}
+
+		.club h1{
+		  font-size:36px;
+		  margin-bottom:26px;
+		  width:230px;
+		  height:50px;
+		  display:flex;
+		  font-weight: 500;
+		}
+
+		.study h1{
+		  font-size:36px;
+		  margin-bottom:26px;
+		  width:230px;
+		  height:50px;
+		  display:flex;
+		  font-weight: 500;
+		}
+
+
+		.box2{
+		    display:inline-block;
+		    border:1px solid #C4C4C4;
+		    width:500px; height: 274px;
+		    display:flex;
+		    align-items:center;
+		    justify-content:center;
+		}
+
+		.box2 h2{
+		  text-align:center;
+		  font-size:18px;
+		  display:flex;
+		  font-weight:400;
+		  width:300px;
+		  height:21px;
+		}
+
+		.club_arrow{
+		  display:flex;
+		  justify-content:center;
+		  width:41px;
+		  height:52px;
+		}
+
+		.study_arrow{
+		  display:flex;
+		  justify-content:center;
+		  width:41px;
+		  height:52px;
+		}
+
+		/*푸터*/
+
+ .footer{
+        width: 100%;
+        height: 200px;
+        background-color: black;
+        text-align: left;
+        color: #F5F5F5;
+        display: flex;
+        position: fixed;
+        font-size: 16px;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+
+        }
+        .footer_img{
+            display: flex;
+            margin-left: 265px;
+            margin-top: 65px;
+        }
+        .footer_info{
+            margin-left: 68px;
+            padding-top: 54px;
+            margin-bottom: 50px;
+        }
+        .footer_href{
+            display: flex;
+            flex-wrap: nowrap;
+            width: 175px;
+           /* height: 35px;*/
+            border: #F5F5F5 solid 1px;
+            padding: 9px 15px;
+        }
+        .footer_site{
+            width: 303px;
+            height: 95px;
+            margin-top: 52px;
+            margin-right: 300px;
+             margin-left: 20px;
+        }
+
+        content{
+        	width: 1200px;
+        }
+
+	</style>
+</head>
+<body>
+		<header> 
+                <nav> 
+ 					<a href="./index.html"><img class="logo" src="./img/logo/logo.jpg" width="140px" height="50px" ></a>
+                    <ul class="menu"> 
+                 <li><a href="./비교과.html">비교과</a></li>
+                <li><a href="./동아리.html">동아리</a></li>
+                <li><a href="./스터디.html" >스터디</a></li>
+                <li><a href="./커뮤니티.html">커뮤니티</a></li>
+                <li><a href="./마이페이지.html" id="now-title"><span style="font-weight: bold; color: #3399FF; ">마이페이지</span></a></li>
+                    </ul>
+                </nav>
+            </header>
+
+<content>
+	<div class="profile">
+	  <div class="profile1">
+	    <div class="circle"></div>
+      <div class="profile_text">이름&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이현지<br>
+        학과&nbsp;&nbsp;&nbsp;&nbsp; 미디어디자인공학과<br>
+        학번&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2020194088
+      </div>
+	  </div>
+	   <div class="profile2">
+       
+	     <div class="bookmark">
+         <h1>북마크 된 활동<div class="plus"><a href="#" target="_blank">
+	<img src="https://i.postimg.cc/pdStpgdC/plus2.png" >
+</a></div></h1>
+         <div class="bookmark_text">
+           <div class="text_box">
+           <div class="text_title">안드로이드 + 파이어베이스 SNS앱 만들기</div>
+         <div class="sub_title">컴퓨터공학과</div>
+           </div>
+           <div class="arrow"><a href="./비교과 상세페이지.html" target="_blank">
+	<img src="https://i.postimg.cc/HnRP0zB1/arrow.png" >
+</a></div>
+         </div>
+             <hr style="border: solid 1px #EAEAEA; width:444px">     
+         
+                  <div class="bookmark_text">
+           <div class="text_box">
+           <div class="text_title">파이널 컷 프로 A to Z, 완벽 마스터 하기</div>
+         <div class="sub_title">디자인공학부</div>
+           </div>
+           <div class="arrow"><a href="./비교과 상세페이지.html" target="_blank">
+	<img src="https://i.postimg.cc/HnRP0zB1/arrow.png" >
+</a></div>
+         </div>
+             <hr style="border: solid 1px #EAEAEA; width:444px"> 
+         
+                  <div class="bookmark_text">
+           <div class="text_box">
+           <div class="text_title">그래픽 소모임 모집</div>
+         <div class="sub_title">전공</div>
+           </div>
+           <div class="arrow"><a href="./비교과 상세페이지.html" target="_blank">
+	<img src="https://i.postimg.cc/HnRP0zB1/arrow.png" >
+</a></div>
+         </div>
+             <hr style="border: solid 1px #EAEAEA; width:444px"> 
+         
+       </div>
+       
+       
+           
+           
+           
+	   </div>
+         
+	   <div class="profile3"> 
+	     <h1>나의 TIP포인트</h1>
+       <div class="tippoint">
+            <div class="circle_container">
+                <div class="circle_text">총 취득 포인트</div>
+                <div class="circle2">175+</div>
+                </div>
+
+                   <div class="circle_container">
+                <div class="circle_text">총 사용 포인트</div>
+                <div class="circle2">0</div>
+                </div>
+
+                   <div class="circle_container">
+                <div class="circle_text">잔여 포인트</div>
+                <div class="circle2">175</div>
+                </div>
+       </div>
+	   </div>
+	</div>
+
+	<div class="my_container">
+	  <div class="club">
+	    <h1>나의 동아리<div class="club_arrow"><a href="#" target="_blank">
+	<img src="https://i.postimg.cc/HnRP0zB1/arrow.png" >
+</a></div></h1>
+       <div class="box2"><h2>가입된 동아리가 존재하지 않습니다.</h2></div>
+	  </div>
+    
+	   <div class="study">
+	     <h1>나의 스터디<div class="study_arrow"><a href="#" target="_blank">
+	<img src="https://i.postimg.cc/HnRP0zB1/arrow.png" >
+</a></div></h1>
+       <div class="box2"><h2>가입된 스터디가 존재하지 않습니다.</h2></div>
+	   </div>
+	</div>
+
+<!--아까하던거!-->
+<div class="table_title">
+			<h1>나의 역량</h1>
+</div>
+
+<div class="container">
+<table id="bar-graph">
+<tbody>
+  <tr id="section-1">
+    <th scope="row">협업봉사</th>
+      <td class="before bar"><p></p></td>
+      <td class="after bar"><p></p></td>
+  </tr>
+  <tr id="section-2">
+      <th scope="row">비전도전</th>
+      <td class="before bar"><p></p></td>
+      <td class="after bar"><p></p></td>
+  </tr>
+  
+  <tr id="section-3">
+      <th scope="row">문제해결</th>
+      <td class="before bar"><p></p></td>
+      <td class="after bar"><p></p></td>
+  </tr>
+  
+  <tr id="section-4">
+      <th scope="row">의사소통</th>
+      <td class="before bar"><p></p></td>
+      <td class="after bar"><p></p></td>
+  </tr>
+  
+<tr id="section-5">
+      <th scope="row">정보문해</th>
+      <td class="before bar"><p></p></td>
+      <td class="after bar"><p></p></td>
+  </tr>
+  
+  <tr id="section-6">
+      <th scope="row">세계시민</th>
+      <td class="before bar"><p></p></td>
+      <td class="after bar"><p></p></td>
+  </tr>
+  </tr>
+</tbody>
+</table>
+<div id="bar-ticks">
+  <div class="tick"><p>100</p></div>
+  <div class="tick"><p>80</p></div>
+  <div class="tick"><p>60</p></div>
+  <div class="tick"><p>40</p></div>
+  <div class="tick"><p>20</p></div>
+  <div class="tick"><p>0</p></div>
+  </div>
+</div>
+
+<div class="table_title">
+			<h1>나의 설문조사<div class="study_arrow"><a href="설문조사.html" target="_blank">
+	<img src="https://i.postimg.cc/HnRP0zB1/arrow.png" >
+</a></div></h1>
+</div>
+
+<div class="board_list_wrap">
+		<table class="board_list">
+		
+		<!--테이블 헤더!-->
+		<thead>
+			<tr>
+				<th>번호</th>
+				<th>프로그램</th>
+				<th>승인여부</th>
+				<th>수강기간</th>
+				<th>신청기간</th>
+				<th>사후설문</th>
+			</tr>
+		</thead>
+		<!--테이블 바디!-->
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td><div class="program">
+							<div class="program_img"><img src="https://i.postimg.cc/Pqn9jBxz/image.png"></div>
+							<div class="content"><h1>취업개발팀</h1><h2>웹 개발자 취준백서</h2></div>
+						</div>
+				</td>
+				<td>승인</td>		
+				<td>21.09.11<br>~21.10. 22</td>
+				<td>2021.12.13</td>
+				<td><button type ="button" onclick = "location.href = '설문조사.html' ">설문하기</button></td>
+			</tr>
+
+			<tr>
+				<td>2</td>
+				<td><div class="program">
+							<div class="program_img"><img src="https://i.postimg.cc/v8cz8N1P/image-55.png"></div>
+							<div class="content"><h1>디자인공학과</h1><h2>입문자를 위한 HTML 기초 강의</h2></div>
+						</div>
+				</td>
+				<td>승인</td>		
+				<td>21.09.11<br>~21.10. 22</td>
+				<td>2021.12.13</td>
+				<td><button type ="button" onclick = "location.href = '설문조사.html' ">설문하기</button></td>
+			</tr>
+
+			<tr>
+				<td>3</td>
+				<td><div class="program">
+							<div class="program_img"><img src="https://i.postimg.cc/8k9b7mMT/image-64.png"></div>
+							<div class="content"><h1>디자인공학과</h1><h2>입문자를 위한 CSS 기초 강의</h2></div>
+						</div>
+				</td>
+				<td>승인</td>		
+				<td>21.09.11<br>~21.10. 22</td>
+				<td>2021.12.13</td>
+				<td><button type ="button" onclick = "location.href = '설문조사.html' ">설문하기</button></td>
+			</tr>
+
+			<tr>
+				<td>4</td>
+				<td><div class="program">
+							<div class="program_img"><img src="https://i.postimg.cc/pXjJz5Jz/image-65-1.png"></div>
+							<div class="content"><h1>게임공학과</h1><h2>유니티로 배우는 게임 프로그래밍 기초</h2></div>
+						</div>
+				</td>
+				<td>승인</td>		
+				<td>21.09.11<br>~21.10. 22</td>
+				<td>2021.12.13</td>
+				<td><button type ="button" onclick = "location.href = '설문조사.html' ">설문하기</button></td>
+			</tr>
+
+			<tr>
+				<td>5</td>
+				<td><div class="program">
+							<div class="program_img"><img src="https://i.postimg.cc/HnyMqDrh/image-65-2.png"></div>
+							<div class="content"><h1>취업개발팀</h1><h2>시선을 사로잡는 웹 초급</h2></div>
+						</div>
+				</td>
+				<td>승인</td>		
+				<td>21.09.11<br>~21.10. 22</td>
+				<td>2021.12.13</td>
+				<td><button type ="button" onclick = "location.href = '설문조사.html' ">설문하기</button></td>
+			</tr>
+    		</tbody>
+			</table>
+</div>
+</content>
+
+<!--푸터!-->
+
+  <footer> 
+                <div class="footer"> 
+                    <div class="footer_img">
+                        <img src="https://i.postimg.cc/tJWfNT44/logo02.png" alt="" style="width: 270px; height: 55px;">
+                    </div>
+                    <div class="footer_info" style="width: 80%;">
+                    개인정보처리방침 | 개인정보 목적외 이용·제공대장 | 정보보호실천수칙 | 정보공개 | 대학정보공시 | 원격지원
+                     <br> 
+                    <P>15073 경기도 시흥시 산기대학로 237 (정왕동) 한국산업기술대학교 대표전화 031-8041-1000 입학안내 1599-2036 <br>
+                COPYRIGHT 2014 KOREA POLYTECHNIC UNIVERSITY. ALL RIGHTS RESERVED.webmaster@kpu.ac.kr</P>
+                    </div>
+                    <div class="footer_site">
+                        <span class="footer_href">관련사이트 바로가기</span>
+                        <p class="footer_margin">Today : 6,872<br>
+                            Total : 44,681,788</p>
+                    </div>
+               </div>
+            </footer>
+</body>
+</html>

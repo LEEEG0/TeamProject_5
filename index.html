@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<title>메인페이지</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto:wght@300&family=Rokkitt:wght@500&display=swap" rel="stylesheet">
+
+	<style>
+
+	html{
+		position: relative;
+		min-height: 100%;
+		margin: 0;
+	}
+
+	body{
+		min-height: 100%;
+	}
+		*{
+			font-family: 'Noto Sans KR', sans-serif;
+			margin-left: 0;
+			margin-right: 0;
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+        header{
+    		display: flex;
+    		align-items: center;
+    		justify-content: center;
+    		background-color: #fff;
+    		height: 100px;
+    		 box-shadow: 0 4px 16px -4px #dddddd ;
+    	}
+    	nav{
+    		display: flex;
+    		justify-content: space-between;
+    		width: 1200px;
+    	}
+    	.logo{
+    		width: 90px;
+    		height: 60px;
+    		display: flex;
+    		/*margin-left: 103px;*/
+    		display: flex;
+    		justify-content: space-between;
+    	}
+    	.nav{
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		text-decoration: none;
+            /*margin-right: 103px;*/
+    	}
+    	.nav li{
+    		list-style: none;
+			font-weight: medium;
+    	}
+    	.nav li a{
+    		text-decoration: none;
+    		margin-left: 30px;
+    		color: black;
+    	   padding-bottom: 4px;
+        }
+    	.nav li a:hover{
+    		color: #3399FF;
+            border-bottom: 2px solid #3399FF;
+    	}
+		/*--------------------------------------------------네비*/
+
+   .box{
+			display: block;
+			width: 280px;
+			height: 390px;
+			box-shadow: 8px 8px 20px 0 rgba(0,0,0,0.25);
+			border-radius: 10px;
+			margin-bottom: 24px;
+		}
+		a{
+ 			text-decoration-line: none;
+ 		}
+		.box-image{
+			width: 280px;
+			height:164px;
+			object-fit: cover;
+			border-radius: 10px 10px 0 0;	
+		}
+		.box > .text{
+			margin-left: 24px;
+			margin-right: 24px;
+		}
+		.text .title{
+			display: block;
+			font-size: 18px;
+			font-weight: bold;
+			color: #2C2C2C;
+			margin-top: 24px;
+			margin-bottom: 12px;
+		}
+		.text .major{
+			display: block;
+			font-size: 12px;
+			font-weight: 300;
+			color: #929292;
+			margin-top: 0;
+			margin-bottom: 24px;
+		}
+		.text_sub{
+			margin-bottom: 12px;
+		}
+		.text_sub_bottom{
+			text-decoration: none;
+			margin-left: 8px;
+			color: #BDBDBD;
+			font-size: 16px;
+			font-weight: 500;
+		}
+		.text_sub .img_date{
+			margin-left: 28px;
+		}
+		.info{
+			margin-top: 12px;
+			font-size: 16px;
+			padding-bottom: 12px;
+		}
+		hr{
+			border: 0;
+			height: 0.4px;
+		}
+
+        .box:hover .box-image {
+            filter: brightness(20%);
+        }
+		.box:hover .box_point{
+			opacity: 1;
+			z-index: 999;
+		}
+        .caption_title{
+            width: 80px;
+            height: 80px;
+            border-radius: 50px;
+            background-color: #FF695E;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            font-size: 36px;
+            margin-top: 12px;
+        }
+        .caption_desc{
+            color: #FFAFA9;
+            text-align: center;
+        }
+		.box_point{
+			position: absolute;
+			margin-top: 22px;
+			margin-left: 100px;
+			opacity: 0;
+
+			transition: 0.5s;
+		}
+		.box_point_TIP{
+			box-sizing: border-box;
+			border-radius: 100px; 
+			width: 80px; 
+			height: 80px; 
+			background-color: #FF695E; 
+			text-align: center; 
+			font-size: 36px;
+			line-height: 40px;
+			padding-top: 20px;
+		}
+		.box_point:hover{
+			opacity: 1.0;
+			z-index: 999;
+		}
+
+
+.zzim_area{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.b_area{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+
+
+/*----------------------------------카드UI*/
+
+		   .club_name{
+          font-weight: bold;
+          color: #3399FF;
+      }
+      .club_hastag{
+         margin-left:320px;
+         margin-right: auto;
+         margin-top: 24px;
+
+      }
+      .club_hastag_01{
+          display: inline-block;
+          height: 24px;
+          margin-right: 24px;
+          margin-top: 20px;
+          background-color: #FFFFFF;
+          color:#3399FF;
+          font-size: 16px;
+          text-align: center;
+          border-radius: 30px;
+          border: #EEEEEE solid 1px;
+          padding: 2px;
+      }
+      .club_hastag_01 a{
+          text-decoration: none;
+          color: #3399FF;
+      }
+      .club_hastag_01:hover{
+          background-color: #3399FF;
+      }
+      .club_hastag_01 a:hover{
+          color: #fff;
+      }
+      .club_radio{
+          margin-left: 960px;
+          font-size: 14px;
+          text-align: center;
+      }
+      .club_box {
+			display: inline-block;
+			width: 580px;
+			height: 270px;
+			box-shadow: 8px 8px 20px 0 rgba(0,0,0,0.25);
+			border-radius: 10px;
+			margin-bottom: 24px;
+            /*margin-right:40px;*/
+
+            transition: 0.3s;
+		}
+
+		.club_box1{
+		display: inline-block;
+		width: 580px;
+		height: 270px;
+		box-shadow: 8px 8px 20px 0 rgba(0,0,0,0.25);
+		border-radius: 10px;
+		margin-bottom: 24px;
+		margin-right: 80px;
+
+		transition: 0.3s;
+        
+		}
+
+		.club_box1:hover{
+			opacity: 0.6;
+		}
+
+        .club_box a{
+            text-decoration: none;
+            color: #000;
+        }
+
+        .club_box1 a{
+            text-decoration: none;
+            color: #000;
+        }
+
+		.club-box-image{
+			width: 276px;
+			height:270px;
+			object-fit: cover;
+			border-radius: 10px 0 0 0;	
+		}
+		.club_text{
+			margin-left: 28px;
+			margin-right: 28px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            float: left;
+            
+		}
+		.club_text .club_main_title{
+			display: block;
+			font-size: 18px;
+			font-weight: bold;
+			color: #2C2C2C;
+			margin-top: 24px;
+			margin-bottom: 12px;
+		}
+        .club_text .club_has{
+            color: #66B9FF;
+            font-size: 14px;
+        }
+		.club_text_sub{
+			margin-bottom: 12px;
+		}
+		.club_text_sub_bottom{
+			text-decoration: none;
+			margin-left: 8px;
+			color: #BDBDBD;
+			font-size: 16px;
+			font-weight: 500;
+		}
+		.club_img{
+            width: 276px;
+            height: 270px;
+            float: left;
+        }
+        .club_icon_2{
+            color: #424242;
+            font-size: 14px;
+        }
+  /*-----------------------------------------동아리 카드 ui*/
+
+          .study_box{
+			display: block;
+			width: 1250px;
+			height: 224px;
+			box-shadow: 8px 8px 20px 0 rgba(0,0,0,0.25);
+			border-radius: 10px;
+			margin-bottom: 24px;
+
+			transition: 0.3s;
+
+		}
+		.stuyd_box-image{
+			width: 276px;
+			height:175px;
+			object-fit: cover;
+			border-radius: 8px 8px 8px 8px;	
+ 
+		}
+        .study_group{
+            float: left;
+            margin-top: 24px;
+        }
+		.study_text{
+			margin-left: 75px;
+			margin-right: 28px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            float: left; 
+		}
+		.study_text{
+			display: inline-block;
+		}
+        .study_title{
+            color: #000;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .study_hastag{
+            border-radius: 28px;
+            width: 72px;
+            height: 21px;
+            background-color: #3399FF;
+            font-size: 12px;
+            font-weight: normal;
+            color: #fff;
+            padding: 2px 3px;
+            text-align: center;
+        }
+		.study_text_sub{
+            color: #606060;
+            font-weight: normal;
+		}
+		.study_img{
+            width: 276px;
+            height: 160px;
+            float: left;
+                 margin-left: 36px;
+      margin-top: 24px;
+        }	
+        .study_notice{
+            float: left;
+            border-left: solid 0.1px #E0E0E0;
+            width: 248px;
+            height: 122px;
+            padding-right: 14px;
+            padding-left: 48px;
+            padding-bottom: 4px;
+            margin-left: 50px;
+            margin-top: 48px;
+            color: #000;
+            font-weight: normal;
+            font-size: 14px;
+        }
+        .study_member{
+            font-weight: bold;
+            margin-right: 32px;
+        }
+
+                .club_box:hover{
+
+            opacity: 0.6;
+        }
+
+                .study_box:hover{
+            opacity: 0.6;
+        }
+
+
+
+/*---------------------------------------------------------스터디 ui*/
+
+
+
+		.content_area{
+			display: flex;
+			flex-direction: column;
+			width: 1250px;
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 200px;
+		}
+
+		.content_area .zzim{
+			margin-bottom: 150px;
+			margin-top: 200px;
+		}
+
+
+		.content_area .Beprojext{
+			margin-bottom: 150px;
+		}
+
+
+		.some img{
+			border-radius: 10px;
+		}
+		.best_area .area_box1{
+			width: 582px;
+			height: 300px;
+			background-color: rgba(168, 205, 255, 0.09);
+			display: inline-block;
+			border-radius: 10px;
+			margin-right: 80px;
+			margin-bottom: 150px;
+		}
+
+		.best_area .area_box2{
+			width: 582px;
+			height: 300px;
+			background-color: rgba(168, 205, 255, 0.09);
+			display: inline-block;
+			border-radius: 10px;
+			margin-bottom: 150px;
+		}
+
+		.best_area .text{
+			font-size: 16px;
+			font-weight: 400;
+			width: 210px;
+			float: left;
+			margin-top: 20px;
+			margin-right: 40px;
+		}
+
+		.best_area h3{
+			font-size: 16px;
+			font-weight: 600;
+			margin-bottom: 0px;
+		}
+
+		.best_area h4{
+			font-size: 12px;
+			font-weight: 400;
+		}
+
+		.best_area .some img{
+			width: 226px;
+		}
+
+		.best_area .people img{
+			width: 40px;
+			margin-right: 10px;
+			float: left;
+		}
+
+		.best_content{
+		margin-left: 50px;
+		margin-top: 50px;
+		}
+
+
+/*		.best_content h5{
+			display: inline-block;
+			font-family: 'Rokkitt', serif;
+			font-size: 100px;
+			margin-bottom: 0px;
+			margin-top: 50px;
+		}*/
+
+
+
+
+		
+
+
+		.content_area .dong{
+			margin-bottom: 150px;
+
+		}
+
+
+		.dong_review{
+			display: flex;
+			flex-direction: column;
+		}
+
+
+		.dong_review_area{
+			display: flex;
+			flex-direction: row;
+		}
+		.content_area .dong_review{
+			margin-bottom: 150px;
+			margin-top: 150px;
+			/*display: block;*/
+		}
+
+		.content_area .study{
+			margin-bottom: 150px;
+		}
+
+		.study_area{
+			/*margin-left: 20px;*/
+		}
+
+		.content_area .community{
+			margin-bottom: 150px;
+			margin-top: 150px;
+
+		}
+
+		.community_area{
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.content_area h1{
+			font-size: 24px;
+			margin-bottom: 30px;
+		}
+		.play{
+			border-radius: 10px;
+		}
+		.play1{
+			border-radius: 10px;
+		}
+
+		.play{
+			border-radius: 10px;
+		}
+		.play1{
+			border-radius: 10px;
+			margin-right:80px;
+		}
+
+
+		.table{
+				border: 1px solid #BDBDBD;
+				border-radius: 12px;
+				width: 582px;
+				float: left;
+			  border-collapse: collapse;
+			  border-radius: 10px;
+			  border-style: hidden;
+			  box-shadow: 0 0 0 1px #BDBDBD;
+			  /*margin-right: 40px;*/
+		}
+
+		.table a{
+			text-decoration: none;
+			color: black;
+			font-weight: 500;
+		}
+
+		.table a:hover {
+			text-decoration-line: underline;
+		}
+		
+
+		.table th:nth-child(1){
+			padding: 20px;
+		}
+
+		.table td{
+			padding-left: 30px;
+			font-size: 14px;
+			color: #9e9e9e;
+			line-height: 45px;
+		}
+
+		.table2{
+			margin-left: 30px;
+		}
+
+		.table_title{
+			font-size: 26px;
+			margin: 15px;
+		}
+
+/*-----------------------------------------------푸터*/
+
+ .footer{
+    	width: 100%;
+        height: 200px;
+    	background-color: black;
+        text-align: left;
+        color: #F5F5F5;
+        display: flex;
+        position: fixed;
+        font-size: 16px;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+
+    	}
+        .footer_img{
+            display: flex;
+            margin-left: 265px;
+            margin-top: 65px;
+        }
+        .footer_info{
+            margin-left: 68px;
+            padding-top: 54px;
+            margin-bottom: 50px;
+        }
+        .footer_href{
+        	display: flex;
+        	flex-wrap: nowrap;
+            width: 175px;
+           /* height: 35px;*/
+            border: #F5F5F5 solid 1px;
+            padding: 9px 15px;
+        }
+        .footer_site{
+            width: 303px;
+            height: 95px;
+            margin-top: 52px;
+            margin-right: 300px;
+        }
+
+		#footer_today{
+			margin-top: 10px;
+		}
+
+.area_title{
+	display: flex;
+	justify-content: space-between;
+}
+
+.area_title a{
+	text-decoration: none;
+	color: #3399FF;
+	font-size: 20px;
+	line-height: 50px;
+}
+
+.area_title img{
+	width: 30px;
+	height: 30px;
+	padding-bottom: 5px;
+}
+
+.area_title:hover a{
+	color: #2775c3;
+}
+
+.more_icon{
+	display: flex;
+}
+
+.more_icon img{
+	margin-left: 4px;
+}
+
+.ratangle{
+	height: 28px;
+	width: 4px;
+	border: 1px solid #3399ff;
+	background-color: #3399FF;
+	margin-right: 15px;
+}
+
+
+		
+	</style>
+
+</head>
+<body>
+
+	            <header> 
+                <nav> 
+                    <a href="./index.html"><img class="logo" src="./img/logo/logo.jpg" width="140px" height="50px" ></a>
+                    <ul class="nav"> 
+                        <li><a href="./비교과.html"><span style="font-weight: bold; color: #3399FF;">비교과</a></li></span></li>
+                        <li><a href="./동아리.html">동아리</a></li>
+                        <li><a href="./스터디.html">스터디</a></li>
+                        <li><a href="./커뮤니티.html">커뮤니티</a></li>
+                        <li><a href="./마이페이지.html">마이페이지</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a href="#"><img src="./img/배너1.png" class="d-block w-100" alt="..." height="500px"></a>
+    </div>
+    <div class="carousel-item">
+      <a href="#"><img src="./img/배너2.png" class="d-block w-100" alt="..." height="500px"></a>
+    </div>
+	<div class="carousel-item">
+      <a href="#"><img src="./img/배너3.png" class="d-block w-100" alt="..." height="500px"></a>
+    </div>
+    <div class="carousel-item">
+      <a href="#"><img src="./img/배너4.png" class="d-block w-100" alt="..." height="500px"></a>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+<div class="plz">
+<div class="content_area">
+	<div class="zzim">
+
+		<div class="area_title" >
+		<div class="more_icon"><div class="ratangle"></div><h1>내가 찜해둔 프로그램</h1> <img  src="./icon/태그표시.png" alt=""></div>
+		<a href="./마이페이지.html"class="see_more">더보기<img src="./icon/right.png" alt=""></a>
+		</div>
+
+		<div class="zzim_area">
+
+        <a href="./비교과 상세페이지.html" class="box">
+        		<div class="box_point" style="color: #fff; font-weight: bold;">
+			<div class="box_point_TIP">TIP</div>
+			<br>포인트 30점
+		</div>
+
+		<div class="box-main" style="position: relative;">
+        <img src="./img/android.jpg" width="100%" height="164px" class="box-image">
+		<div style="position: absolute; top: 16px; left: 249px;">
+			<img src="./icon/bookmark.png" alt="">
+		</div>
+	</div>
+        <div class="text">
+        <p class="title">안드로이드+파이어베이스<br>SNS앱 만들기</p>
+        <p class="major">컴퓨터공학과</p>
+		<div class="text_sub">
+		<img src="./icon/star.jpg" alt=""><span class="text_sub_bottom"><span style="color: #424242;" >3.5</span>/5.0</span>
+		<img class="img_date" src="./icon/date.jpg" alt=""><span class="text_sub_bottom">11.04 ~ 11.10</span></div>
+		<hr width=”236px” color="#BDBDBD" noshade />
+		<div class="info"><progress value="90" max="120"></progress><span class="text_sub_bottom"><span style="color: #5A83E8;"> 13</span>/15명</div>
+        </div>
+		
+		
+    </a>
+
+        <a href="./비교과 상세페이지.html" class="box">
+
+        		<div class="box_point" style="color: #fff; font-weight: bold;">
+			<div class="box_point_TIP">TIP</div>
+			<br>포인트 30점
+		</div>
+
+		<div class="box-main" style="position: relative;">
+        <img src="./img/youtuber.jpg" width="100%" height="164px" class="box-image">
+		<div style="position: absolute; top: 16px; left: 249px;">
+			<img src="./icon/bookmark.png" alt="">
+		</div>
+	</div>
+        <div class="text">
+        <p class="title">나도 유튜버! <br>초간단 유튜브 기초 디자인</p>
+        <p class="major">디자인공학부</p>
+		<div class="text_sub">
+		<img src="./icon/star.jpg" alt=""><span class="text_sub_bottom"><span style="color: #424242;" >4.5</span>/5.0</span>
+		<img class="img_date" src="./icon/date.jpg" alt=""><span class="text_sub_bottom">11.04 ~ 11.10</span></div>
+		<hr width=”236px” color="#BDBDBD" noshade />
+		<div class="info" ><progress value="120" max="120"></progress><span class="text_sub_bottom"><span style="color: #5A83E8;"> 마감</span></div>
+        </div>
+		
+		
+    </a>
+
+        <a href="./비교과 상세페이지.html" class="box">
+
+        		<div class="box_point" style="color: #fff; font-weight: bold;">
+			<div class="box_point_TIP">TIP</div>
+			<br>포인트 30점
+		</div>
+
+		<div class="box-main" style="position: relative;">
+        <img src="./img/Photoshop.jpg" width="100%" height="164px" class="box-image">
+		<div style="position: absolute; top: 16px; left: 249px;">
+			<img src="./icon/bookmark.png" alt="">
+		</div>
+	</div>
+        <div class="text">
+        <p class="title">포토샵으로 누구나 만드는<br>상세페이지</p>
+        <p class="major">디자인공학부</p>
+		<div class="text_sub">
+		<img src="./icon/star.jpg" alt=""><span class="text_sub_bottom"><span style="color: #424242;" >2.5</span>/5.0</span>
+		<img class="img_date" src="./icon/date.jpg" alt=""><span class="text_sub_bottom">12.15 ~ 12.29</span></div>
+		<hr width=”236px” color="#BDBDBD" noshade />
+		<div class="info"><progress value="40" max="120"></progress><span class="text_sub_bottom"><span style="color: #5A83E8;"> 5</span>/20명</div>
+        </div>
+		
+		
+    </a>
+
+         <a href="./비교과 상세페이지.html" class="box">
+
+         		<div class="box_point" style="color: #fff; font-weight: bold;">
+			<div class="box_point_TIP">TIP</div>
+			<br>포인트 30점
+		</div>
+
+		<div class="box-main" style="position: relative;">
+        <img src="./img/kpu신입생포트폴리오.png" width="100%" height="164px" class="box-image">
+		<div style="position: absolute; top: 16px; left: 249px;">
+			<img src="./icon/bookmark.png" alt="">
+		</div>
+	</div>
+        <div class="text">
+        <p class="title">2021 KPU 신입생<br>대학생활 포트폴리오 공모전</p>
+        <p class="major">교육혁신팀</p>
+		<div class="text_sub">
+		<img src="./icon/star.jpg" alt=""><span class="text_sub_bottom"><span style="color: #424242;" >4.0</span>/5.0</span>
+		<img class="img_date" src="./icon/date.jpg" alt=""><span class="text_sub_bottom">11.18 ~ 12.16</span></div>
+		<hr width=”236px” color="#BDBDBD" noshade />
+		<div class="info"><progress value="60" max="120"></progress><span class="text_sub_bottom"><span style="color: #5A83E8;"> 24</span>/48명</div>
+        </div>
+		
+		
+    </a>
+
+</div>
+	</div>
+
+	<div class="Beprojext">
+
+
+		<div class="area_title" >
+		<div class="more_icon"><div class="ratangle"></div><h1>비교과 프로그램</h1></div>
+		<a href="./비교과.html"class="see_more">더보기<img src="./icon/right.png" alt=""></a>
+		</div>
+
+		<div class="b_area">
+	
+			<a href="./비교과 상세페이지.html" class="box">
+
+					<div class="box_point" style="color: #fff; font-weight: bold;">
+			<div class="box_point_TIP">TIP</div>
+			<br>포인트 30점
+		</div>
+
+		<div class="box-main" style="position: relative;">
+        <img src="./img/startup.jpg" width="100%" height="164px" class="box-image">
+		<div style="position: absolute; top: 16px; left: 249px;">
+			<img src="./icon/bookmark.png" alt="">
+		</div>
+	</div>
+        <div class="text">
+        <p class="title">스타트업 생태계 전시와<br>최저가 라이브 커머스 소개</p>
+        <p class="major">SW 교육센터</p>
+		<div class="text_sub">
+		<img src="./icon/star.jpg" alt=""><span class="text_sub_bottom"><span style="color: #424242;" >3.5</span>/5.0</span>
+		<img class="img_date" src="./icon/date.jpg" alt=""><span class="text_sub_bottom">12.27 ~ 12.28</span></div>
+		<hr width=”236px” color="#BDBDBD" noshade />
+		<div class="info"><progress value="110" max="120"></progress><span class="text_sub_bottom"><span style="color: #5A83E8;"> 43</span>/50명</div>
+        </div>
+		
+		
+    </a>
+
+        <a href="./비교과 상세페이지.html" class="box">
+
+        		<div class="box_point" style="color: #fff; font-weight: bold;">
+			<div class="box_point_TIP">TIP</div>
+			<br>포인트 30점
+		</div>
+
+		<div class="box-main" style="position: relative;">
+        <img src="./img/C입문.jpg" width="100%" height="164px" class="box-image">
+		<div style="position: absolute; top: 16px; left: 249px;">
+			<img src="./icon/bookmark.png" alt="">
+		</div>
+	</div>
+        <div class="text">
+        <p class="title">[게임,앱 개발/프로그래밍]을 
+<br>위한 C/C++ 입문</p>
+        <p class="major">컴퓨터공학부</p>
+		<div class="text_sub">
+		<img src="./icon/star.jpg" alt=""><span class="text_sub_bottom"><span style="color: #424242;" >4.4</span>/5.0</span>
+		<img class="img_date" src="./icon/date.jpg" alt=""><span class="text_sub_bottom">01.06 ~ 01.13</span></div>
+		<hr width=”236px” color="#BDBDBD" noshade />
+		<div class="info"><progress value="40" max="120"></progress><span class="text_sub_bottom"><span style="color: #5A83E8;"> 8</span>/22명</div>
+        </div>
+		
+		
+    </a>
+
+        <a href="./비교과 상세페이지.html" class="box">
+
+        		<div class="box_point" style="color: #fff; font-weight: bold;">
+			<div class="box_point_TIP">TIP</div>
+			<br>포인트 30점
+		</div>
+
+		<div class="box-main" style="position: relative;">
+        <img src="./img/ADsP.jpg" width="100%" height="164px" class="box-image">
+		<div style="position: absolute; top: 16px; left: 249px;">
+			<img src="./icon/bookmark.png" alt="">
+		</div>
+	</div>
+        <div class="text">
+        <p class="title">입문자를 위한 데이터 분석<br>준전문가(ADsP) 자격증 따기</p>
+        <p class="major">SW 교육센터</p>
+		<div class="text_sub">
+		<img src="./icon/star.jpg" alt=""><span class="text_sub_bottom"><span style="color: #424242;" >3.5</span>/5.0</span>
+		<img class="img_date" src="./icon/date.jpg" alt=""><span class="text_sub_bottom">01.02 ~ 01.12</span></div>
+		<hr width=”236px” color="#BDBDBD" noshade />
+		<div class="info"><progress value="60" max="120"></progress><span class="text_sub_bottom"><span style="color: #5A83E8;"> 13</span>/26명</div>
+        </div>
+		
+		
+    </a>
+
+         <a href="./비교과 상세페이지.html" class="box">
+
+         		<div class="box_point" style="color: #fff; font-weight: bold;">
+			<div class="box_point_TIP">TIP</div>
+			<br>포인트 30점
+		</div>
+
+		<div class="box-main" style="position: relative;">
+        <img src="./img/Finalcut.jpg" width="100%" height="164px" class="box-image">
+		<div style="position: absolute; top: 16px; left: 249px;">
+			<img src="./icon/bookmark.png" alt="">
+		</div>
+	</div>
+        <div class="text">
+        <p class="title">파이널 컷 프로 A to Z, 
+<br>완벽 마스터 하기</p>
+        <p class="major">디자인공학부</p>
+		<div class="text_sub">
+		<img src="./icon/star.jpg" alt=""><span class="text_sub_bottom"><span style="color: #424242;" >3.8</span>/5.0</span>
+		<img class="img_date" src="./icon/date.jpg" alt=""><span class="text_sub_bottom">01.14 ~ 01.28</span></div>
+		<hr width=”236px” color="#BDBDBD" noshade />
+		<div class="info"><progress value="90" max="120"></progress><span class="text_sub_bottom"><span style="color: #5A83E8;"> 16</span>/20명</div>
+        </div>
+		
+		
+    </a>
+
+    </div>
+
+
+	</div>
+
+	<div class="best_review">
+
+		<div class="area_title" >
+		<div class="more_icon"><div class="ratangle"></div><img  src="./icon/트로피.png" alt="" margin="10px"><h1>비교과 참여 우수 후기</h1><img  src="./icon/트로피.png" alt=""></div>
+		<a href="./비교과 상세페이지.html"class="see_more">더보기<img src="./icon/right.png" alt=""></a>
+		</div>
+
+		<div class="best_area">
+			<div class="area_box1">
+				<div class="best_content">
+					
+					<h2 class="text">일상의 제로썸을 포지티브썸으로 바꿔줄 비교과 교육 프로그램  ‘국제협상아카데미’ 강력 추천합니다!</h2>
+					<a href="#" class="some" ><img  src="./img/비교과/Photoshop.jpg" alt=""></a>
+						<div class="pp">
+						<div class="people"><img src="./people_1.png" width="30px" alt=""></div>
+						<h3>전도현</h3>
+						<h4>IT경영학과</h4>
+						</div>
+				</div>
+			</div>
+
+			<div class="area_box2">
+				<div class="best_content">
+					
+					<h2 class="text">일상의 제로썸을 포지티브썸으로 바꿔줄 비교과 교육 프로그램  ‘국제협상아카데미’ 강력 추천합니다!</h2>
+					<a href="#" class="some" ><img  src="./img/스터디/Kotlin.jpg" alt=""></a>
+						<div class="pp">
+						<div class="people"><img src="./people_1.png" width="30px" alt=""></div>
+						<h3>전도현</h3>
+						<h4>IT경영학과</h4>
+						</div>
+				</div>
+			<div>
+		</div>
+	</div>
+
+	<div class="dong">
+		<div class="area_title" >
+		<div class="more_icon"><div class="ratangle"></div><h1>동아리</h1></div>
+		<a href="./동아리.html"class="see_more">더보기<img src="./icon/right.png" alt=""></a>
+		</div>
+
+ <div class="dong_area">
+
+		<div class="club_content ">
+                <div class="club_box1"> <a href="./동아리 상세페이지.html">
+                    <div class="club_img"><img src="./img/동아리/동아리연합회.jpg" width="276px" height="100%" class="club-box-image"></div>
+                    <div class="club_text">
+                        <p class="club_has">#학술동아리</p>
+                        <p class="club_main_title">동아리 연합회</p>
+                        <div class="club_text_sub">
+                        <img src="./icon/stars.jpg" alt=""><span class="club_text_sub_bottom"><span style="color: #424242;" >3.5</span>/5.0</span>
+                        <p style="font-size: 14px; margin-bottom: 32px;">한국산업기술대학교의 <br>모든 동아리를 관리한다!</p>
+                        <div class="club_icon_2"><img src="./icon/location.jpg" alt="" style="margin-right: 4px;">종합관 지하1층 101호</div>
+                    </div>
+                       </div>    
+                </div>
+                </a></a>
+                <div class="club_box"> <a href="./동아리 상세페이지.html">
+                    <div class="club_img"><img src="./img/동아리/드론.png" width="276px" height="100%" class="club-box-image"></div>
+                    <div class="club_text">
+                        <p class="club_has">#학술동아리</p>
+                        <p class="club_main_title">드론 동아리 ‘날틀’</p>
+                        <div class="club_text_sub">
+                        <img src="./icon/stars.jpg" alt=""><span class="club_text_sub_bottom"><span style="color: #424242;" >3.5</span>/5.0</span>
+                        <p style="font-size: 14px; margin-bottom: 32px;">한국산업기술대학교의 <br>모든 동아리를 관리한다!</p>
+                        <div class="club_icon_2"><img src="./icon/location.jpg" alt="" style="margin-right: 4px;">종합관 지하1층 101호</div>
+                    </div>
+                       </div>    
+                </div>
+                </a></a>
+  </div>
+</div>
+
+	<div class="dong_review">
+
+		<div class="area_title" >
+		<div class="more_icon"><div class="ratangle"></div><img src="./icon/손가락.png" alt=""><h1>산기대 동아리를 리뷰한다!</h1><img src="./icon/손가락.png" alt=""></div>
+		<a href=".https://www.youtube.com/channel/UCftGmHlv_6_9fqSlElPhNmQ"class="see_more">더보기<img src="./icon/right.png" alt=""></a>
+		</div>
+
+
+		<div class="dong_review_area">
+		<iframe class="play1" width="580" height="315" src="https://www.youtube.com/embed/PmABJNQgggM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		<iframe class="play" width="580" height="315" src="https://www.youtube.com/embed/aw0OLZ4o0eY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+
+</div>
+
+	</div >
+		
+	<div class="study">
+
+		<div class="area_title" >
+		<div class="more_icon"><div class="ratangle"></div><h1>우리 같이 공부해요!</h1><img src="./icon/연필.png" alt=""></div>
+		<a href="./스터디.html"class="see_more">더보기<img src="./icon/right.png" alt=""></a>
+		</div>
+
+		<div class="study_area">
+
+		            <a href="./스터디 상세페이지.html"><div class="study_box">
+            <div class="study_img"><img src="./img/스터디/unity3D.jpg" width="236px" height="175px" class="study_box-image"></div>
+            <div class="study_text">
+                <div class="study_group">
+                <div class="study_hastag">공기업면접</div>
+                <p class="study_title">게임 개발 같이 하실분 연락주세요~</p>
+                <div class="study_text_sub">
+                <p style="font-size: 14px; margin-bottom: 40px;">게임 개발 프로젝트 진행하려고 합니다. 관심있는 분은 연락주세요~!
+                     <br>여기와서 같이 개발해나가요 :) </p>
+            </div>
+        </div>
+            <div class="study_notice">
+                <p style="line-height: 0.8;"><span class="study_member">인원</span> 2명</p>
+                <p style="line-height: 0.8;"><span class="study_member">장소</span> 정왕 투썸플레이스</p>
+                <p style="line-height: 0.8;"><span class="study_member">방법</span> 오프라인</p>
+                <p style="line-height: 0.8;"><span class="study_member">기간</span> 3개월</p>
+            </div>
+               </div>
+               </a>
+
+	</div>
+	<div></div>
+	
+	<div class="community">
+		<div class="area_title" >
+		<div class="more_icon"><div class="ratangle"></div><h1>커뮤니티</h1><img src="./icon/불.png" alt="" width="1%" height="1%"></div>
+		<a href="./커뮤니티.html"class="see_more">더보기<img src="./icon/right.png" alt=""></a>
+		</div>
+
+	<div class="community_area">
+		<table class="table">
+			<thead>
+				<tr>
+					<th class="table_title">최근 게시물</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th><a href="./커뮤니티.html">디자인이랑 같이 공부하면 좋을 전공</a></th> <td>방금</td>
+				</tr>
+
+				<tr>
+					<th><a href="./커뮤니티.html">화공양론</a></th> <td>2분전</td>
+				</tr>
+
+				<tr>
+					<th><a href="./커뮤니티.html">로고 도는 것 외주맡긴건가?</a></th> <td>4분전</td>
+				</tr>
+
+				<tr>
+					<th><a href="./커뮤니티.html">미디어디자인학과 소개팅 할 사람</a></th> <td>12분전</td>
+				</tr>
+
+				<th><a href="./커뮤니티.html">미디어디자인학과 소개팅 할 사람</a></th> <td>12분전</td>
+				</tr>
+			</tbody>
+		</table>
+
+				<table class="table table2">
+			<thead>
+				<tr>
+					<th class="table_title">인기 게시물</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th><a href="./커뮤니티.html">나랑 친구할 사람</a></th> <td>방금</td>
+				</tr>
+
+				<tr>
+					<th><a href="./커뮤니티.html">종강 하고 지옥 보고 싶다~</a></th> <td>2분전</td>
+				</tr>
+
+				<tr>
+					<th><a href="./커뮤니티.html">ㅍㅌㅎ 교수님 대면인가요</a></th> <td>4분전</td>
+				</tr>
+
+				<tr>
+					<th><a href="./커뮤니티.html">미적2 교수님 수업 듣는 친구?</a></th> <td>12분전</td>
+				</tr>
+
+				<tr>
+					<th><a href="./커뮤니티.html">kpu 홈페이지 로고는 언제 바뀌나요?</a></th> <td>12분전</td>
+				</tr>
+			</tbody>	
+		</table>
+	</div>
+	</div>
+		
+</div>
+</div>
+
+
+</div>
+
+	        <footer> 
+             	<div class="footer"> 
+                    <div class="footer_img">
+                        <img src="./img/logo/logo02.png" alt="" style="width: 270px; height: 55px;">
+                    </div>
+                    <div class="footer_info" style="width: 80%;">
+                    개인정보처리방침 | 개인정보 목적외 이용·제공대장 | 정보보호실천수칙 | 정보공개 | 대학정보공시 | 원격지원
+                     <br> 
+                    <P>15073 경기도 시흥시 산기대학로 237 (정왕동) 한국산업기술대학교 대표전화 031-8041-1000 입학안내 1599-2036 <br>
+                COPYRIGHT 2014 KOREA POLYTECHNIC UNIVERSITY. ALL RIGHTS RESERVED.webmaster@kpu.ac.kr</P>
+                    </div>
+                    <div class="footer_site">
+                        <span class="footer_href">관련사이트 바로가기</span>
+                        <p id="footer_today">Today : 6,872<br>
+                            Total : 44,681,788</p>
+                    </div>
+               </div>
+            </footer>
+	
+
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>

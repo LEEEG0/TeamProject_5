@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto:wght@300&family=Rokkitt:wght@500&display=swap" rel="stylesheet">
+	<title>Document</title>
+
+	<style>
+
+		*{
+			margin-left: 0;
+			margin-right: 0;
+			padding-left: 0;
+			padding-right: 0;
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+        header{
+    		display: flex;
+    		justify-content: center;
+            align-items: center;
+    		background-color: #fff;
+    		height: 100px;
+            box-shadow: 0 4px 16px -4px #dddddd ;
+    	}
+        nav{
+            display: flex;
+            justify-content: space-between;
+            width: 1194px;
+            padding-top: 20px;
+        }
+        .logo{
+            width: 90px;
+            height: 60px;
+            display: flex;
+            margin-left:0px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+    	.menu{
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		text-decoration: none;
+            margin-right: 0px;
+    	}
+    	.menu li{
+    		list-style: none;
+			font-weight: medium;
+    	}
+    	.menu li a{
+    		text-decoration: none;
+    		margin-left: 30px;
+    		color: black;
+    	   padding-bottom: 4px;
+        }
+    	.menu li a:hover{
+    		color: #3399FF;
+            border-bottom: 2px solid #3399FF;
+    	}
+
+    	/*--------------------------------------------네비*/
+
+   	.all_area{
+			width: 1200px;
+			margin-right: auto;
+			margin-left: auto;
+	}
+	ul,li{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		padding: 10px;
+	}
+	h1{
+		text-align: center;
+		font-size: 36px;
+		font-weight: 700;
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+	.big_menu li a{
+		font-size: 22px;
+		padding: 0;
+		margin: 0;
+	}
+
+	.big_menu ul a{
+		font-size: 22px;
+		padding: 0;
+		margin: 0;
+	}
+
+	a{
+		text-decoration: none;
+		color: #333;
+	}
+
+	.big_menu{
+		display: inline-block;
+
+	}
+	.same_area{
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+	}
+
+	.menu{
+		background-color: #fff;
+		
+		text-align: center;
+		z-index: 100;
+		position: relative;
+	}
+
+	.sub_menu{
+		width: 250px;
+		background-color: #fff;
+		position: absolute;
+		display: none;
+		border: 1px solid #e0e0e0;
+		
+	}
+	.sub_menu > li:hover{
+		background-color: #e0e0e0;
+	}
+
+	.menu:hover .sub_menu{
+		display: block;
+		z-index: 9999;
+	}
+	.post{
+		display:flex;
+			font-size: 18px;
+			background-color: #3399FF;
+			color: #fff;
+			border:1px;
+			border-radius: 30px;
+			width: 150px;
+			padding-top: 12px;
+			padding-bottom: 12px;
+			margin-right: 30px;
+			text-decoration: none;
+			justify-content: center;
+			order: 1;
+	}
+
+	.post_butn:hover a{
+		color: white;
+	}
+
+	.post_butn{ 
+		display: flex; 
+		justify-content: end;
+		margin: 0;
+	} 
+
+	.post_butn:hover .post{
+		background-color: #2775c3;
+	}
+
+	.post_img{
+		margin-left: 10px;
+}
+
+	.tag{
+		display: inline-block;
+		background-color: #fff;
+		font-size: 18px;
+		border: 1px solid #eee;
+		border-radius: 30px;
+		width: 130px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		color: #3399ff;
+		margin-right: 20px;
+	}
+
+
+	.hash_tag{display: inline-block;
+		margin-top: 40px;
+		width: 1200px;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+
+	.tag:hover{
+		background-color: #3399ff;
+		color: #fff;
+	}
+
+
+
+    input[type="text"] { 
+    	width: 1200px; 
+    	padding: 10px 20px; 
+    	margin: 5px 0; 
+    	box-sizing: border-box;
+    	border: 1px solid #e0e0e0 ;
+    	background-color: #f5f5f5;	
+    	font-size: 20px;
+    	border-radius: 30px;
+    	 }
+
+     .input{
+     	display: flex;
+     	position:relative;
+     }
+
+     .search{
+     	margin-top: 40px;
+     	position: relative;
+     	display: flex;
+     	align-items: center;
+     }
+   	.search input[type="text"]{
+   		padding-left: 50px;
+   	}
+
+   	.search img{
+   		position: absolute;
+   		margin-left: 10px;
+
+   	}
+
+   	.commu_box h2{
+   		display:inline-block;
+   		margin-left: 90px;
+   		font-size: 20px;
+   	}
+
+   	   	.commu_box_1 h2{
+   		display:inline-block;
+   		margin-left: 90px;
+   		font-size: 20px;
+   	}
+
+	.commu_box{
+		margin-top: 130px;
+		width:1200px;
+		height: 300px;
+		box-sizing: border-box;
+		position: relative;
+	}
+
+	h4{
+		font-size: 20px;
+	}
+		.commu_box_1{
+		margin-top: 15px;
+		width:1200px;
+		height: 300px;
+		box-sizing: border-box;
+		position: relative;
+	}
+
+
+	.intro{
+		margin-left: 50px;
+	}
+
+   	.intro > img{
+   		position: absolute;
+   		top: 60px;
+   		width: 45px;
+   		height: 45px;
+
+   	}
+
+   	   	.c1 a{
+  		display: flex;
+   		margin-left: 140px;
+   		font-size: 24px;*/
+
+   	}
+
+   	 .c1:hover a{
+   		text-decoration: underline;
+   		color: #333;
+   	}
+
+   	   	.commu_box h4{
+   		display: inline-block;
+   		color: #9e9e9e;
+   		line-height: 45px;
+   		font-weight: 400;
+
+   	}
+
+   	   	   	.commu_box_1 h4{
+   		display: inline-block;
+   		color: #9e9e9e;
+   		line-height: 45px;
+   		font-weight: 400;
+   	}
+
+   	   	.commu_box h5{
+   		display: inline-block;
+   		font-size: 18px;
+   		color: #9e9e9e;
+   		float: right;
+   		padding-right: 50px;
+   		font-weight: 400;
+   		overflow: hidden;
+   	}
+
+   	   	   	.commu_box_1 h5{
+   		display: inline-block;
+   		font-size: 18px;
+   		color: #9e9e9e;
+   		float: right;
+   		padding-right: 50px;
+   		font-weight: 400;
+   		overflow: hidden;
+   	}
+
+   	.box_content{
+   		padding-top: 50px;
+   		border: 1px solid #e0e0e0;
+   	}
+
+   	.plus{
+   		margin-top: 60px;
+   		margin-left: 50px;
+   		margin-bottom: 50px;
+   		
+   	}
+   	.bottom a{
+   		display: flex;
+   		justify-content: center;
+   	}
+
+   	.b2 h3{
+   		color: #FF695E;
+   	}
+
+
+   	.b1 h3{
+   		color: #3399FF;
+   	}
+
+   	.b1 > img{
+   		width: 25px;
+   		height: 25px;
+   	}
+
+   	.bottom{
+   		display: block;
+   		position: relative;
+   		margin: 0px;
+   		overflow: hidden;
+   		transition: transform 0.4s ease-in-out;
+		z-index: 10;
+   	}
+   	.bottom span{
+   		display: block;
+   		transition: transform 0.3s ease-in-out;
+   	}
+
+   	.bottom span:last-child{
+   		position: absolute;
+   		left: 0;
+   	}
+
+   	.bottom:hover span{
+   		transform: translateY(-100%);
+   	}
+
+   	.bottom h3{
+   		display: inline-block;
+   		font-size: 18px;
+   		margin:0  !important;
+   		margin-top: 10px;
+   		flex-wrap: nowrap;
+   		padding-right: 50px;
+   		padding-left: 5px;
+   		font-weight: 400;
+   		
+   	}
+
+   	.bottom img{
+   		width: 28px;
+   		height: 28px;
+   	}
+
+   	.bottom_menu{
+   		margin-left: 0;
+   		width: 1200px;
+   		display: flex;
+   		justify-content: start;
+   		padding-left: 50px;
+   		padding-top: 20px;
+   		padding-bottom: 20px;
+   		margin-top: 9px;
+   		border-top: 1px solid #e0e0e0;
+   		box-sizing: border-box;
+
+   	}
+
+   	.last{
+   		width: 1240px;
+   		display: flex;
+   		overflow: hidden;
+   	}
+
+   	.content{
+   		position: relative;
+   	}
+    .click{
+        	margin-top: 50px;
+        	text-align: right;
+        	}
+
+     #hot{
+        	margin-left: 10px;
+        }
+
+   	
+   	input[type="radio"]{
+   			background-color: #B8E1FF;
+   			appearance: none;
+            width: 14px;
+            height: 14px;
+            border-radius: 100%;
+   		}
+
+   	input[type=radio]:checked{
+            background-color: #4BA8FF;
+            appearance: none;
+            margin-left: 16px;
+            border: none;
+            width: 14px;
+            height: 14px;
+            border-radius: 100%;
+        }
+
+/*====================================푸터*/
+   	    .footer{
+    	width: 100%;
+        height: 200px;
+    	background-color: black;
+        text-align: left;
+        color: #F5F5F5;
+        display: flex;
+        font-size: 16px;
+
+    	}
+        .footer_img{
+            display: flex;
+            margin-left: 265px;
+            margin-top: 65px;
+        }
+        .footer_info{
+            margin-left: 68px;
+            padding-top: 54px;
+            margin-bottom: 50px;
+        }
+        .footer_href{
+        	display: flex;
+        	flex-wrap: nowrap;
+            width: 175px;
+            border: #F5F5F5 solid 1px;
+            padding: 9px 15px;
+        }
+        .footer_site{
+            width: 303px;
+            height: 95px;
+            margin-top: 52px;
+            margin-right: 300px;
+        }
+
+  		.icon_down{
+  			display: flex
+  		}
+
+  		.all_menu{
+  			display: flex;
+  			align-items: center;
+  		}
+	</style>
+</head>
+<body>
+            <header> 
+                <nav> 
+                    <a href="./index.html"><img class="logo" src="./img/logo/logo.jpg" width="140px" height="50px" ></a>
+                    <ul class="nav"> 
+                        <li><a href="./비교과.html">비교과</a></li>
+                        <li><a href="./동아리.html">동아리</a></li>
+                        <li><a href="./스터디.html">스터디</a></li>
+                        <li><a href="./커뮤니티.html"><span style="font-weight: bold; color: #3399FF;">커뮤니티</span></a></li>
+                        <li><a href="./마이페이지.html">마이페이지</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+  <div class="all_area">
+	<div class="content_commu">
+	<h1> 커뮤니티 </h1>
+	</div>
+
+		<div class="same_area">
+			<div class="big_menu">
+				<ul class="menu">
+					<div class="all_menu"><li><a href="#">전체메뉴</a></li> <img class="icon_down" src="./icon/arrow_down.png" alt=""></div>
+					<ul class="sub_menu">
+						<li><a href="#">기계공학과</a></li>
+						<li><a href="#">기계설계공학과</a></li>
+						<li><a href="#">메카트로닉스공학과</a></li>
+						<li><a href="#">전자공학부</a></li>
+						<li><a href="#">컴퓨터공학부</a></li>
+						<li><a href="#">게임공학부</a></li>
+						<li><a href="#">신소재공학과</a></li>
+						<li><a href="#">생명화학공학과</a></li>
+						<li><a href="#">디자인공학부</a></li>
+						<li><a href="#">경영학부</a></li>
+						<li><a href="#">나노반도체공학과</a></li>
+						<li><a href="#">에너지·전자공학과</a></li>
+					</ul>
+				</ul>
+			</div>	
+
+			<div class="post_butn">
+			<a class="post" href="#">글쓰기
+			<img class="post_img" src="./icon/pencil.png" width="24px" height="24px" ></a>
+			</div>
+		</div>
+
+		<div class="hash_tag">
+			<a class="tag" href="#">#졸업</a>
+			<a class="tag" href="#">#TIP포인트</a>
+			<a class="tag" href="#">#강의내용</a>
+			<a class="tag" href="#">#장학금</a>
+			<a class="tag" href="#">#프로그램</a>
+			<a class="tag" href="#">#강의시간</a>
+			<a class="tag" href="#">#비교과</a>
+			<a class="tag" href="#">#과목</a>
+			<a class="tag" href="#">#기숙사</a>
+		</div>
+
+		<div class="search">
+			<input class="bar" type="text" placeholder="궁금한 점을 검색해보세요." >
+			<img src="./icon/search.png" alt="">
+		</div>
+
+		<div class="content_area">
+		<div class="click">
+		  <input type="radio" id="new" name="click" value="new"
+		         checked>
+		  <label for="new">최신순</label>
+
+		  <input type="radio" id="hot" name="click" value="hot">
+		  <label for="hot">공감순</label>
+		 </div>
+
+
+			<div class="content">
+		<div class="commu_box_1">
+			<div class="box_content">
+				<div class="intro">
+					<img src="./icon/profile.png" alt="">
+					<h2>김수진</h2>
+				</div>
+				<div class="c1"><a href="#">졸업 관련 같이 스터디할 사람 구해요~! 2명 필요합니다.</a></div>
+					<div class="plus">
+					<h4>미디어디자인전공</h4>
+					<h5>30분 전</h5>
+				</div>
+
+				<div class="bottom_menu">
+					<div class="bottom">
+						<span><a href="#"><img src="./icon/smile.png"  alt=""><h3>공감하기</h3></a></span>
+						<span><a class="b2" href="#"><img src="./icon/smile_hover.png"  alt=""><h3>공감하기</h3></a></span>
+						</div>
+					<div class="bottom">
+						<span><a href="#"><img src="./icon/bubble.png" alt=""><h3>댓글달기</h3></a></span>
+						<span><a class="b1" href="#"><img src="./icon/bubble_hover.png" alt=""><h3>댓글달기</h3></a></span>
+					</div>
+				</div>
+
+				</div>
+			</div>
+		</div>	
+
+		<div class="commu_box">
+			<div class="box_content">
+				<div class="intro">
+					<img src="./icon/profile.png" alt="">
+					<h2>김수진</h2>
+				</div>
+				<div class="c1"><a href="#">졸업 관련 같이 스터디할 사람 구해요~! 2명 필요합니다.</a></div>
+					<div class="plus">
+					<h4>미디어디자인전공</h4>
+					<h5>30분 전</h5>
+				</div>
+
+				<div class="bottom_menu">
+					<div class="bottom">
+						<span><a href="#"><img src="./icon/smile.png"  alt=""><h3>공감하기</h3></a></span>
+						<span><a class="b2" href="#"><img src="./icon/smile_hover.png"  alt=""><h3>공감하기</h3></a></span>
+						</div>
+					<div class="bottom">
+						<span><a href="#"><img src="./icon/bubble.png" alt=""><h3>댓글달기</h3></a></span>
+						<span><a class="b1" href="#"><img src="./icon/bubble_hover.png" alt=""><h3>댓글달기</h3></a></span>
+					</div>
+				</div>
+
+				</div>
+			</div>
+
+					<div class="commu_box">
+			<div class="box_content">
+				<div class="intro">
+					<img src="./icon/profile.png" alt="">
+					<h2>김수진</h2>
+				</div>
+				<div class="c1"><a href="#">졸업 관련 같이 스터디할 사람 구해요~! 2명 필요합니다.</a></div>
+					<div class="plus">
+					<h4>미디어디자인전공</h4>
+					<h5>30분 전</h5>
+				</div>
+
+				<div class="bottom_menu">
+					<div class="bottom">
+						<span><a href="#"><img src="./icon/smile.png"  alt=""><h3>공감하기</h3></a></span>
+						<span><a class="b2" href="#"><img src="./icon/smile_hover.png"  alt=""><h3>공감하기</h3></a></span>
+						</div>
+					<div class="bottom">
+						<span><a href="#"><img src="./icon/bubble.png" alt=""><h3>댓글달기</h3></a></span>
+						<span><a class="b1" href="#"><img src="./icon/bubble_hover.png" alt=""><h3>댓글달기</h3></a></span>
+					</div>
+				</div>
+
+				</div>
+			</div>
+
+					<div class="commu_box last">
+			<div class="box_content">
+				<div class="intro">
+					<img src="./icon/profile.png" alt="">
+					<h2>김수진</h2>
+				</div>
+				<div class="c1"><a href="#">졸업 관련 같이 스터디할 사람 구해요~! 2명 필요합니다.</a></div>
+					<div class="plus">
+					<h4>미디어디자인전공</h4>
+					<h5>30분 전</h5>
+				</div>
+
+				<div class="bottom_menu">
+					<div class="bottom">
+						<span><a href="#"><img src="./icon/smile.png"  alt=""><h3>공감하기</h3></a></span>
+						<span><a class="b2" href="#"><img src="./icon/smile_hover.png"  alt=""><h3>공감하기</h3></a></span>						
+					</div>
+					<div class="bottom">
+						<span><a href="#"><img src="./icon/bubble.png" alt=""><h3>댓글달기</h3></a></span>
+						<span><a class="b1" href="#"><img src="./icon/bubble_hover.png" alt=""><h3>댓글달기</h3></a></span>
+					</div>
+				</div>
+
+				</div>
+			</div>
+		</div>	
+
+
+
+
+	</div>
+	</div>
+
+	            <footer> 
+                <div class="footer"> 
+                    <div class="footer_img">
+                        <img src="./img/logo/logo02.png" alt="" style="width: 270px; height: 55px;">
+                    </div>
+                    <div class="footer_info" style="width: 80%;">
+                    개인정보처리방침 | 개인정보 목적외 이용·제공대장 | 정보보호실천수칙 | 정보공개 | 대학정보공시 | 원격지원
+                     <br> 
+                    <P>15073 경기도 시흥시 산기대학로 237 (정왕동) 한국산업기술대학교 대표전화 031-8041-1000 입학안내 1599-2036 <br>
+                COPYRIGHT 2014 KOREA POLYTECHNIC UNIVERSITY. ALL RIGHTS RESERVED.webmaster@kpu.ac.kr</P>
+                    </div>
+                    <div class="footer_site">
+                        <span class="footer_href">관련사이트 바로가기</span>
+                        <p>Today : 6,872<br>
+                            Total : 44,681,788</p>
+                    </div>
+               </div>
+            </footer>
+</body>
+</html>

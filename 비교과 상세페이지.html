@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>비교과 상세페이지</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto:wght@300&family=Rokkitt:wght@500&display=swap" rel="stylesheet">
+	<style type="text/css">
+
+	*{
+		font-family: 'Noto Sans KR', sans-serif;
+	}
+
+	        html{
+        position: relative;
+        min-height: 100%;
+        /*margin: 0;*/
+    }
+
+    body{
+    	width: 100%;
+        min-height: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		overflow-x: hidden
+
+    }
+	
+		content{
+			width: 1200px;
+
+		}
+		/*내비게이션바*/
+	}
+		*{
+			font-family: 'Noto Sans KR', sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+        header{
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		background-color: #fff;
+    		height: 100px;
+            box-shadow: 0 4px 16px -4px #dddddd ;
+    	}
+    	nav{
+    		display: flex;
+    		justify-content: space-between;
+    		width: 1194px;
+    		padding-top: 20px;
+    	}
+    	.logo{
+    		width: 90px;
+    		height: 60px;
+    		display: flex;
+    		margin-left:0px;
+    		margin-bottom: 20px;
+    		display: flex;
+    		justify-content: space-between;
+    	}
+    	.menu{
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		text-decoration: none;
+            margin-right: 0px;
+    	}
+    	.menu li{
+    		list-style: none;
+			font-weight: medium;
+    	}
+    	.menu li a{
+    		text-decoration: none;
+    		margin-left: 30px;
+    		color: black;
+    	   padding-bottom: 4px;
+        }
+    	.menu li a:hover{
+    		color: #3399FF;
+            border-bottom: 2px solid #3399FF;
+        }
+		/*배너*/
+		.main{
+			width: 100%;
+			height: 548px;
+			background-color: #002333;
+		}
+		.main-info{
+			width: 1200px;
+			height: 548px;
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			vertical-align: bottom;
+		}
+		.main-img{
+			display: inline-block;
+			padding-top: 46px;
+			padding-right: 30px;
+		}
+		.main-img img{
+			border-radius: 12px;
+			width: 632px;
+			height: 455px;
+		}
+		.main-text{
+			display: inline-block;
+			padding-left: 30px;
+			vertical-align: top;
+			padding-top: 46px;
+		}
+		.main-text h2{
+			font-size: 36px;
+			font-weight: bold;
+			color: #ffffff;
+			margin: 0;
+		}
+		.main-text .text-mark{
+			display: inline-block;
+			margin: 0;
+			vertical-align: middle;
+		}
+		.text-mark h3{
+			display: inline-block;
+			color: #ffffff;
+			font-weight: bold;
+			font-size: 18px;
+		}
+		.text-mark .star{
+			display: inline-block;
+			color: #FFD600;
+			width: 16px;
+			height: 16px;
+		}
+		.text-mark span{
+			display: inline-block;
+			color: #fff;
+			font-weight: bold;
+			font-size: 16px;
+		}
+		.text-mark h4{
+			display: inline-block;
+			color: #E0E0E0;
+			font-weight: 300;
+			font-size: 16px;
+		}
+		.text-sub h3{
+			color: #ffffff;
+			display: inline-block;
+			font-size: 18px;
+			margin-right: 20px;
+			margin-top: 6px;
+			margin-bottom: 6px;
+		}
+		.text-sub p{
+			color: #F5f5f5;
+			display: inline-block;
+			font-size: 16px;
+			margin-top: 12px;
+			margin-bottom: 12px;
+		}
+		.text-button {
+			width: 376px;
+			height: 53px;
+			border: solid 1px #006CFF;
+			background-color: #006CFF;
+			margin: 0;
+			margin-top: 20px;
+			color: #ffffff;
+			font-size: 18px;
+			font-weight:; 
+			display: inline-block;
+			text-align: center;
+			text-decoration: none;
+			margin-top: 40px;
+			line-height: 50px;
+		}
+
+		.text-button:hover{
+			color: #fff;
+			background-color: #004bb1;
+			border: solid 1px #004bb1;
+		}
+		/*작은내비바*/
+		.navi{
+			
+			height: 70px;
+			list-style: none;
+			display: flex;
+			justify-content: center;
+			border-bottom: 1px solid #E0E0E0;
+		}
+
+		.navi a{
+			display: flex;
+			flex-basis: 200px;
+			text-decoration: none;
+			color: #333;
+			font-size: 20px;
+			font-weight: 300;
+			margin-left: 28px;
+			margin-right: 28px;
+			margin-bottom: 0;
+			line-height: 70px;
+		}
+		.navi li a:hover {
+			color: #3399FF;
+			border-bottom: 2px solid #3399FF;
+		}
+
+		.one{
+			 border-bottom: 2px solid #3399FF; 
+		}
+		/*프로그램 정보*/
+		.info{
+			width: 1200px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		.info .info-desc{
+			margin-top: 60px;
+		}
+		.info .info-desc p{
+			font-size: 18px;
+			margin-top: 52px;
+			margin-left: 56px;
+			margin-bottom: 0;
+		}
+		/*프로그램 후기*/
+		.info-comment{
+			margin-top: 180px;
+			width: 1200px;
+		}
+		.info-comment-desc{
+			display: flex;
+			justify-content: space-around;
+			margin-top: 36px;
+		}
+		.info-comment .info-comment-title{
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			border-bottom: 1px solid #BDBDBD;
+			padding-bottom: 16px;
+		}
+		.info-comment .info-comment-title h2{
+			font-size: 36px;
+			margin: 0;
+			font-weight: 400;
+			color: #2C2C2C;
+		}
+		.info-comment .info-comment-title h3{
+			font-size: 20px;
+			font-weight: 400;
+			border: 1px solid #3399FF;
+			background-color: #3399FF;
+			border-radius: 24px;
+			padding: 8px 20px;
+			margin: 0;
+		}
+
+				.info-comment-title h3:hover{
+			background-color: #004bb1;
+			border: 1px solid #004bb1;
+		}
+		.info-comment .info-comment-title a{
+			text-decoration: none;
+			display: inline-block;
+			color: #fff;
+		}
+		.info-comment-desc .profile-img{
+			width: 72px;
+			height: 72px;
+			border: 1px solid #E0E0E0;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+		.profile-img .user-img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.profile-text{
+			display: flex;
+			flex-direction: column;
+		}
+		.profile-text h4{
+			font-size: 16px;
+			font-weight: 400;
+			margin: 0;
+		}
+		.profile-text .profile-star{
+			color: #FFD600;
+			margin-top: 8px;
+			margin-bottom: 8px;
+		}
+		.profile-text .profile-star span{
+			color: #9E9E9E;
+		}
+		.profile-text #time{
+			margin: 0;
+			font-size: 14px;
+			color: #9E9E9E;
+		}
+		.profile-text p{
+			width: 1080px;
+			margin-top: 10px;
+			margin-left: 0;
+			margin-bottom: 0;
+			font-size: 18px;
+			color: #616161;
+		}
+        .page_number{
+            text-align: center;
+            margin-top: 100px;
+            margin-bottom: 150px;
+        }
+        .page_number a{
+        text-decoration: none;
+        font-size: 24px;
+        color: #333;
+        font-weight: normal;
+        margin-left: 6px;
+        padding: 5px;
+        }
+		 
+		 .page_number a:hover{
+            font-weight: 500;
+           color: #3399FF;
+        }
+		#menu{
+			list-style: none;
+			text-align: center;
+		}
+		#menu li{
+			display: inline-block;
+			font-size: 20px;
+			margin-right: 16px;
+			font-weight: 300;
+		}
+		.number #now_page{
+			font-weight: bold;
+		}
+		/*프로그램 추천*/
+		.info-recommend{
+			width: 1200px;
+			margin-top: 160px;
+			margin-bottom: 400px;
+		}
+		.info-recommend .info-recommend-title{
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			border-bottom: 1px solid #BDBDBD;
+			padding-bottom: 16px;
+		}
+		.info-recommend .info-recommend-title h2{
+			font-size: 36px;
+			font-weight: 400;
+			color: #2C2C2C;
+			margin: 0;
+		}
+		.info-recommend .info-recommend-title h3{
+			font-size: 24px;
+			font-weight: 400;
+			margin: 0;
+			display: inline-block;
+		}
+		.info-recommend .info-recommend-title a{
+			text-decoration: none;
+			color: #2C2C2C;
+		}
+		.info-recommend-card{
+			display: flex;
+			justify-content: space-between;
+			margin-top: 36px;
+		}
+
+		.box{
+			display: block;
+			width: 280px;
+			height: 380px;
+			box-shadow: 8px 8px 20px 0 rgba(0,0,0,0.25);
+			border-radius: 10px;
+			margin-bottom: 24px;
+		}
+		a{
+ 			text-decoration-line: none;
+ 		}
+		.box-image{
+			width: 280px;
+			height:164px;
+			object-fit: cover;
+			border-radius: 10px 10px 0 0;	
+		}
+		.text{
+			margin-left: 24px;
+			margin-right: 24px;
+		}
+		.text .title{
+			display: block;
+			font-size: 18px;
+			font-weight: bold;
+			color: #2C2C2C;
+			margin-top: 24px;
+			margin-bottom: 12px;
+			margin-left: 0;
+		}
+
+		.text .major{
+			display: block;
+			font-size: 12px;
+			font-weight: 300;
+			color: #929292;
+			margin-top: 0;
+			margin-bottom: 24px;
+			margin-left: 0;
+		}
+		.text_sub{
+			margin-bottom: 12px;
+		}
+		.text_sub_bottom{
+			text-decoration: none;
+			margin-left: 8px;
+			color: #BDBDBD;
+			font-size: 16px;
+			font-weight: 500;
+		}
+		.text_sub .img_date{
+			margin-left: 28px;
+		}
+		.info{
+			margin-top: 12px;
+			font-size: 16px;
+		}
+		hr{
+			border: 0;
+			height: 0.4px;
+		}
+
+		        .box:hover .box-image {
+            filter: brightness(20%);
+        }
+		.box:hover .box_point{
+			opacity: 1;
+			z-index: 999;
+		}
+        .caption_title{
+            width: 80px;
+            height: 80px;
+            border-radius: 50px;
+            background-color: #FF695E;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            font-size: 36px;
+            margin-top: 12px;
+        }
+        .caption_desc{
+            color: #FFAFA9;
+            text-align: center;
+        }
+		.box_point{
+			position: absolute;
+			margin-top: 22px;
+			margin-left: 100px;
+			opacity: 0;
+
+			transition: 0.5s;
+		}
+		.box_point_TIP{
+			box-sizing: border-box;
+			border-radius: 100px; 
+			width: 80px; 
+			height: 80px; 
+			background-color: #FF695E; 
+			text-align: center; 
+			font-size: 36px;
+			line-height: 40px;
+			padding-top: 20px;
+
+
+		}
+		.box_point:hover{
+			opacity: 1.0;
+			z-index: 999;
+		}
+		/*푸터*/
+ .footer{
+        width: 100%;
+        height: 200px;
+        background-color: black;
+        text-align: left;
+        color: #F5F5F5;
+        display: flex;
+        position: fixed;
+        font-size: 16px;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+
+        }
+        .footer_img{
+            display: flex;
+            margin-left: 265px;
+            margin-top: 65px;
+        }
+        .footer_info{
+            margin-left: 68px;
+            padding-top: 54px;
+            margin-bottom: 50px;
+        }
+        .footer_href{
+            display: flex;
+            flex-wrap: nowrap;
+            width: 175px;
+           /* height: 35px;*/
+            border: #F5F5F5 solid 1px;
+            padding: 9px 15px;
+        }
+        .footer_site{
+            width: 303px;
+            height: 95px;
+            margin-top: 52px;
+            margin-right: 300px;
+             margin-left: 20px;
+        }
+
+
+               #footer_today{
+            margin-top: 10px;
+
+        }
+	</style>
+</head>
+<body>
+
+	<!--내비게이션바-->
+	<header> 
+        <nav> 
+            <a href="./index.html"><img class="logo" src="./img/logo/logo.jpg" width="140px" height="50px" ></a>
+            <ul class="menu"> 
+                <li><a href="./비교과.html" id="now-title"><span style="font-weight: bold; color: #3399FF; ">비교과</span></a></li>
+                <li><a href="./동아리.html">동아리</a></li>
+                <li><a href="./스터디.html">스터디</a></li>
+                <li><a href="./커뮤니티.html">커뮤니티</a></li>
+                <li><a href="./마이페이지.html">마이페이지</a></li>
+            </ul>
+        </nav>
+    </header>
+
+	<!--배너-->
+	<content>
+	<div class="main">
+		<div class="main-info">
+			<div class="main-img"><img src="https://i.postimg.cc/c44G3NTK/image-65.jpg"></div>
+			<div class="main-text">
+				<h2>데이터 분석 준전문가 자격증</h2>
+				<div class="text-mark">
+					<h3>평점</h3>
+					<div class="star">&#x02605;</div>
+					<h4><span>4.5</span>/5.0</h4>
+				</div>
+				<div class="text-sub">
+					<h3>대상학과</h3><p>전체</p><br>
+					<h3>대상학년</h3><p>1~4학년</p><br>
+					<h3>교육기간</h3><p>2021.12.28 ~ 2022.01.28</p><br>
+					<h3>교육시간</h3><p>2시간</p><br>
+					<h3>교육장소</h3><p>온라인 비대면 플랫폼</p><br>
+					<h3>교육횟수</h3><p>1회</p><br>
+				</div>
+				<a href="#" class="text-button">신청하기</a>
+			</div>
+		</div>	
+	</div>
+	<!--작은내비바-->
+	<ul class="navi">
+               <li><a class="one" href="#"><span style="font-weight: bold; color: #3399FF;">프로그램 소개</span></a></li>
+               <li><a href="#">교육과정</a></li>
+               <li><a href="#">강의자 소개</a></li>
+               <li><a href="#">프로그램 후기</a></li>
+               <li><a href="#">비슷한 활동</a></li>
+            </ul>
+	<!--프로그램정보-->
+	<div class="info">
+		<div class="info-desc">
+			<div class="info-graph"><img src="https://i.postimg.cc/k4TpKtBH/Group-192.png"></div>
+			<p>
+			교수학습개발센터기초학습<br>
+			2021-2 학습역량진단(K-LIFT)<br>
+			<br>
+			❒ 추진 배경 및 목적<br>
+			❍ 학습자의 학습역량은 성공적인 대학생활 영위를 위해 필수적인 역량<br>
+			❍ 학습역량 진단도구 최종 개발로 우리대학 학생들의 특성을 반영한 맞춤형 학습역량 측정 가능<br>
+			❍ 학습역량 진단 결과를 통해 자신의 학습역량의 강점과 약점을 파악하고 학습역량 강화 지원 프로그램에 참여할 수 있는 기회 제공<br>
+			<br>
+			❒ 모집 대상: 신입생 및 재학생<br>
+			<br>
+			❒ 진단 실시 방법 : U-CAN+ > 역량관리 > 학습역량진단 > 검사하러가기 > 참여 > 결과보기<br>
+			<br>
+			❒ 운영일정: 2021. 10. 25.(월) ~ 11. 28.(일)<br>
+			❍ 별도의 신청없이 U-CAN+ 시스템에서 자가진단 실시<br>
+			❍ 비고: 검사 종료 후 검사결과 개별확인 가능<br>
+			<br>
+			❒ 수료 기준: 학습역량 진단 검사 완료<br>
+			<br>
+			❒ 학생지원사항: TIP 포인트 5점 적립</p>
+		</div>
+		<!--프로그램 후기-->
+		<div class="info-comment">
+			<div class="info-comment-title">
+				<h2>프로그램 후기</h2>
+				<a href="#"><h3>댓글남기기</h3></a>
+			</div>
+
+			<div class="info-comment-desc">
+				<div class="profile-img">
+					<img src="https://i.postimg.cc/dtRFzhC7/image-10.png" class="user-img">
+				</div>
+				<div class="profile-text">
+					<h4>전도현</h4>
+					<div class="profile-star">&#x02605;&#x02605;&#x02605;&#x02605;<span>&#x02605;</span></div>
+					<p id="time">2021-11-18 21:04:23</p>
+					<p>공기업 취업을 준비하기 위해서 취업준비 특강을 들었는데 포트폴리오 준비부터 면접 준비까지 어떻게 진행해야하는지 가르쳐주셔서 매우 도움이 되었던 것 같습니다. 앞으로도 이렇게 좋은 프로그램이 많이 생겼으면 좋겠습니다!</p>
+				</div>
+			</div>
+			<div class="info-comment-desc">
+				<div class="profile-img">
+					<img src="https://i.postimg.cc/Zq2X9m3t/image-9.png" class="user-img">
+				</div>
+				<div class="profile-text">
+					<h4>이은경</h4>
+					<div class="profile-star">&#x02605;&#x02605;&#x02605;<span>&#x02605;&#x02605;</span></div>
+					<p id="time">2021-11-15 13:24:55</p>
+					<p>우선 내용이 그리 어렵지 않아서 기초를 배우려는 분한테는 추천하지만 그 이상을 원하는 분은 추천하지 않아요! 한달동안 배우기 좋은 프로그램 같아요. 다음에는 유튜브 응용 디자인도 나왔으면 좋겠어요.</p>
+				</div>
+			</div>			
+			<div class="info-comment-desc">
+				<div class="profile-img">
+					<img src="https://i.postimg.cc/BZxRvdnk/image-11.png" class="user-img">
+				</div>
+				<div class="profile-text">
+					<h4>김수진</h4>
+					<div class="profile-star">&#x02605;&#x02605;&#x02605;&#x02605;&#x02605;</div>
+					<p id="time">2021-11-13 15:32:56</p>
+					<p>요즘 유튜브에 관심이 많아서 이것저것 찾아봤는데 막상 혼자 하려니 어렵더라구요. 근데 이 프로그램 듣고나서 쉽게 유튜브 도전할 수 있을 것 같아요! 추천해요~!</p>
+				</div>
+			</div>
+			<div class="number">
+				<div class="number_info">
+					 <div class="page_number"> 
+                    <a href="#" style="color: #3399FF;">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">></a>
+                </div>
+				</div>	
+			</div>	
+		</div>
+		<!--프로그램 추천-->
+		<div class="info-recommend">
+			<div class="info-recommend-title">
+				<h2>이런 활동은 어떠세요🤔?</h2>
+				<h3><a href="#">더보기 &gt;</a></h3>
+			</div>
+			<div class="info-recommend-card">
+				<a href="#" class="box">
+					<div class="box_point" style="color: #fff; font-weight: bold;">
+			<div class="box_point_TIP">TIP</div>
+			<br>포인트 30점
+		</div>
+				<div style="position: relative;">
+		        <img src="https://i.postimg.cc/qBWQ0WjC/cover-Image-1.jpg" width="100%" height="164px" class="box-image">
+				<div style="position: absolute; top: 16px; left: 249px;"><img src="https://i.postimg.cc/nzj7Ph8S/bookmark1.png" alt="">
+				</div>
+				</div>
+		        <div class="text">
+		        <p class="title">안드로이드+파이어베이스<br>SNS앱 만들기</p>
+		        <p class="major">컴퓨터공학과</p>
+				<div class="text_sub">
+				<img src="https://i.postimg.cc/pTFhBc8g/star.png" alt=""><span class="text_sub_bottom"><span style="color: #424242;" >3.5</span>/5.0</span>
+				<img class="img_date" src="https://i.postimg.cc/j26DpWMc/date.jpg" alt=""><span class="text_sub_bottom">11.04 ~ 11.10</span></div>
+				<hr width=”236px” color="#BDBDBD" noshade />
+				<div class="info"><progress value="90" max="120"></progress><span class="text_sub_bottom"><span style="color: #5A83E8;"> 13</span>/15명</div>
+		        </div>		
+		    	</a>
+
+		    	<a href="#" class="box">
+		    		<div class="box_point" style="color: #fff; font-weight: bold;">
+			<div class="box_point_TIP">TIP</div>
+			<br>포인트 30점
+		</div>
+				<div style="position: relative;">
+		        <img src="https://i.postimg.cc/TY4Q997f/image-55.jpg" width="100%" height="164px" class="box-image">
+				<div style="position: absolute; top: 16px; left: 249px;"><img src="https://i.postimg.cc/nzj7Ph8S/bookmark1.png" alt="">
+				</div>
+				</div>
+		        <div class="text">
+		        <p class="title">스타트업 생태계 전시와<br>최저가 라이브 커머스 소개</p>
+		        <p class="major">SW 교육센터</p>
+				<div class="text_sub">
+				<img src="https://i.postimg.cc/pTFhBc8g/star.png" alt=""><span class="text_sub_bottom"><span style="color: #424242;" >3.8</span>/5.0</span>
+				<img class="img_date" src="https://i.postimg.cc/j26DpWMc/date.jpg" alt=""><span class="text_sub_bottom">12.27 ~ 12.28</span></div>
+				<hr width=”236px” color="#BDBDBD" noshade />
+				<div class="info"><progress value="110" max="120"></progress><span class="text_sub_bottom"><span style="color: #5A83E8;"> 43</span>/50명</div>
+		        </div>		
+		    	</a>
+
+		    	<a href="#" class="box">
+		    		<div class="box_point" style="color: #fff; font-weight: bold;">
+			<div class="box_point_TIP">TIP</div>
+			<br>포인트 30점
+		</div>
+				<div style="position: relative;">
+		        <img src="https://i.postimg.cc/7LgVqyxZ/image-64.jpg" width="100%" height="164px" class="box-image">
+				<div style="position: absolute; top: 16px; left: 249px;"><img src="https://i.postimg.cc/nzj7Ph8S/bookmark1.png" alt="">
+				</div>
+				</div>
+		        <div class="text">
+		        <p class="title">[게임, 앱 개발/프로그래밍]을<br>위한 C/C++ 입문</p>
+		        <p class="major">컴퓨터공학부</p>
+				<div class="text_sub">
+				<img src="https://i.postimg.cc/pTFhBc8g/star.png" alt=""><span class="text_sub_bottom"><span style="color: #424242;" >4.4</span>/5.0</span>
+				<img class="img_date" src="https://i.postimg.cc/j26DpWMc/date.jpg" alt=""><span class="text_sub_bottom">01.06 ~ 01.13</span></div>
+				<hr width=”236px” color="#BDBDBD" noshade />
+				<div class="info"><progress value="40" max="120"></progress><span class="text_sub_bottom"><span style="color: #5A83E8;"> 8</span>/22명</div>
+		        </div>		
+		    	</a>
+
+		    	<a href="#" class="box">
+		    		<div class="box_point" style="color: #fff; font-weight: bold;">
+			<div class="box_point_TIP">TIP</div>
+			<br>포인트 30점
+		</div>
+				<div style="position: relative;">
+		        <img src="https://i.postimg.cc/Z5qnTP4B/image-66.jpg" width="100%" height="164px" class="box-image">
+				<div style="position: absolute; top: 16px; left: 249px;"><img src="https://i.postimg.cc/nzj7Ph8S/bookmark1.png" alt="">
+				</div>
+				</div>
+		        <div class="text">
+		        <p class="title">파이널 컷 프로 A to Z,<br>완벽 마스터 하기</p>
+		        <p class="major">디자인공학부</p>
+				<div class="text_sub">
+				<img src="https://i.postimg.cc/pTFhBc8g/star.png" alt=""><span class="text_sub_bottom"><span style="color: #424242;" >4.0</span>/5.0</span>
+				<img class="img_date" src="https://i.postimg.cc/j26DpWMc/date.jpg" alt=""><span class="text_sub_bottom">01.14 ~ 01.28</span></div>
+				<hr width=”236px” color="#BDBDBD" noshade />
+				<div class="info"><progress value="110" max="120"></progress><span class="text_sub_bottom"><span style="color: #5A83E8;" > 18</span>/20명</div>
+		        </div>		
+		    	</a>
+			</div>
+		</div>
+	</div>
+	</content>
+	<!--푸터-->
+	<footer> 
+        <div class="footer"> 
+            <div class="footer_img">
+                <img src="https://i.postimg.cc/XJDTWZS9/logo02-png.png" alt="" style="width: 270px; height: 55px;">
+            </div>
+            <div class="footer_info" style="width: 80%;">
+                    개인정보처리방침 | 개인정보 목적외 이용·제공대장 | 정보보호실천수칙 | 정보공개 | 대학정보공시 | 원격지원
+                     <br> 
+                    <P>15073 경기도 시흥시 산기대학로 237 (정왕동) 한국산업기술대학교 대표전화 031-8041-1000 입학안내 1599-2036 <br>
+                COPYRIGHT 2014 KOREA POLYTECHNIC UNIVERSITY. ALL RIGHTS RESERVED.webmaster@kpu.ac.kr</P>
+            </div>
+            <div class="footer_site">
+                        <span class="footer_href">관련사이트 바로가기</span>
+                        <p>Today : 6,872<br>
+                            Total : 44,681,788</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

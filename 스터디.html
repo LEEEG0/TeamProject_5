@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <title>스터디</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto:wght@300&family=Rokkitt:wght@500&display=swap" rel="stylesheet">
+    <style>
+
+        html{
+        position: relative;
+        min-height: 100%;
+        margin: 0;
+    }
+
+    body{
+        min-height: 100%;
+    }
+		
+		*{
+			font-family: 'Noto Sans KR', sans-serif;
+		}
+        body{
+            /*width: 100%;*/
+            height: auto;
+        }
+        header{
+    		display: flex;
+            align-items: center;
+    		justify-content: center;
+    		background-color: #fff;
+    		height: 100px;
+            box-shadow: 0 4px 16px -4px #dddddd ;
+    	}
+    	nav{
+    		display: flex;
+    		justify-content: space-between;
+            align-items: center;
+    		width: 1194px;
+            padding-top: 20px;
+    	}
+    	.logo{
+    		width: 90px;
+    		height: 60px;
+    		display: flex;
+    		margin-left:0px;
+            margin-bottom: 20px;
+    		display: flex;
+    		justify-content: space-between;
+    	}
+    	.menu{
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		text-decoration: none;
+            margin-right: 0px;
+    	}
+    	.menu li{
+    		list-style: none;
+			font-weight: medium;
+    	}
+    	.menu li a{
+    		text-decoration: none;
+    		margin-left: 30px;
+    		color: black;
+    	   padding-bottom: 4px;
+        }
+    	.menu li a:hover{
+    		color: #3399FF;
+            border-bottom: 2px solid #3399FF;
+    	}
+        .club_article{
+            align-items: center;
+            width: 1200px;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        input[type="text"] { 
+       width: 1200px; 
+       padding: 10px 20px; 
+       margin: 5px 0; 
+       box-sizing: border-box;
+       border: 1px solid #e0e0e0 ;
+       background-color: #f5f5f5;   
+       font-size: 20px;
+       border-radius: 30px;
+        }
+
+     .input{
+        display: flex;
+        position:relative;
+     }
+
+     .search{
+        margin-top: 76px;
+        position: relative;
+        display: flex;
+        align-items: center;
+     }
+      .search input[type="text"]{
+         padding-left: 50px;
+      }
+
+      .search img{
+         position: absolute;
+         margin-left: 10px;
+
+      }
+      .club_name{
+          font-weight: bold;
+          color: #3399FF;
+      }
+      .club_hastag{
+        text-align: center;
+        width: 1200px;
+         margin-left:auto;
+         margin-right: auto;
+         margin-top: 24px;
+
+      }
+      .club_hastag_01{
+          display: inline-block;
+          height: 40px;
+          width: 126px;
+          line-height: 30px;
+          margin-right: 24px;
+          margin-top: 20px;
+          background-color: #FFFFFF;
+          color:#fff;
+          font-size: 16px;
+          text-align: center;
+          border-radius: 30px;
+          border: #EEEEEE solid 1px;
+          padding: 2px;
+      }
+      .club_hastag_01 a{
+          text-decoration: none;
+          color: #3399FF;
+      }
+      .club_hastag_01:hover{
+          background-color: #3399FF;
+          color: #fff;
+      }
+      .club_hastag_01:hover a{
+          color: #fff;
+      }
+           .click{
+            margin-left: auto;
+            margin-right: auto;
+            width: 1200px;
+            margin-top: 50px;
+            text-align: right;
+            }
+
+     #hot{
+            margin-left: 10px;
+        }
+
+            input[type="radio"]{
+            background-color: #B8E1FF;
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            border-radius: 100%;
+        }
+
+    input[type=radio]:checked{
+            background-color: #4BA8FF;
+            appearance: none;
+            margin-left: 16px;
+            border: none;
+            width: 14px;
+            height: 14px;
+            border-radius: 100%;
+        }
+      .study_box{
+			display: inline-block;
+			width: 1194px;
+			height: 224px;
+			box-shadow: 8px 8px 20px 0 rgba(0,0,0,0.25);
+			border-radius: 10px;
+			margin-bottom: 48px;
+
+            transition: 0.3s;
+		}
+
+        .study_box:hover{
+            opacity: 0.6;
+        }
+		.study_box-image{
+			width: 276px;
+			height:175px;
+			object-fit: cover;
+			border-radius: 8px 8px 8px 8px;	
+            margin-left: 36px;
+            margin-top: 24px;
+		}
+        .study_group{
+            float: left;
+            margin-top: 24px;
+        }
+		.study_text{
+			margin-left: 75px;
+			margin-right: 28px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            float: left; 
+		}
+		.study_text{
+			display: inline-block;
+		}
+        .study_title{
+            color: #000;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .study_hastag{
+            border-radius: 28px;
+            width: 72px;
+            height: 21px;
+            background-color: #3399FF;
+            font-size: 12px;
+            font-weight: normal;
+            color: #fff;
+            padding: 2px 3px;
+            text-align: center;
+        }
+		.study_text_sub{
+            color: #606060;
+            font-weight: normal;
+		}
+		.study_img{
+            width: 276px;
+            height: 270px;
+            float: left;
+        }	
+        .study_notice{
+            float: left;
+            border-left: solid 0.1px #E0E0E0;
+            width: 248px;
+            height: 122px;
+            padding-right: 14px;
+            padding-left: 48px;
+            padding-bottom: 4px;
+            margin-left: 50px;
+            margin-top: 48px;
+            color: #000;
+            font-weight: normal;
+            font-size: 14px;
+        }
+        .study_member{
+            font-weight: bold;
+            margin-right: 32px;
+        }
+        .study_content{
+            width: 1200px;
+            height: auto;
+            margin-top: 48px;
+        }
+        .page_number{
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 350px;
+        }
+        .page_number a{
+        text-decoration: none;
+        font-size: 24px;
+        color: #000;
+        font-weight: normal;
+        margin-left: 6px;
+        padding: 5px;
+        }
+
+                .page_number a:hover{
+            font-weight: 500;
+           color: #3399FF;
+        }
+
+/*------------------------------------------------------------푸터*/
+        
+ .footer{
+        width: 100%;
+        height: 200px;
+        background-color: black;
+        text-align: left;
+        color: #F5F5F5;
+        display: flex;
+        position: fixed;
+        font-size: 16px;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+
+        }
+        .footer_img{
+            display: flex;
+            margin-left: 265px;
+            margin-top: 65px;
+        }
+        .footer_info{
+            margin-left: 68px;
+            padding-top: 54px;
+            margin-bottom: 50px;
+        }
+        .footer_href{
+            display: flex;
+            flex-wrap: nowrap;
+            width: 175px;
+           /* height: 35px;*/
+            border: #F5F5F5 solid 1px;
+            padding: 9px 15px;
+        }
+        .footer_site{
+            width: 303px;
+            height: 95px;
+            margin-top: 52px;
+            margin-right: 300px;
+             margin-left: 20px;
+        }
+
+        #footer_today{
+            margin-top: 10px;
+
+        }
+    
+      
+      
+        </style>
+
+        <body>
+             <!--네비게이션바-->
+            <header> 
+                <nav> 
+                    <a href="./index.html"><img class="logo" src="./img/logo/logo.jpg" width="140px" height="50px" ></a>
+                    <ul class="menu"> 
+                        <li><a href="./비교과.html">비교과</a></li>
+                        <li><a href="./동아리.html">동아리</a></li>
+                        <li><a href="./스터디.html"><span style="font-weight: bold; color: #3399FF;">스터디</span></a></li>
+                        <li><a href="./커뮤니티.html">커뮤니티</a></li>
+                        <li><a href="./마이페이지.html">마이페이지</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!--컨텐츠-->
+            <article class="club_article">
+                <!--검색창-->
+                <div class="search">
+                    <input class="bar" type="text" placeholder="검색하기" style="margin-left: 8px;">
+                    <img src="./icon/search.png" alt="">
+                 </div>
+                 <!--해시태그-->
+                <div class="club_hastag">
+                    <div class="club_hastag_01"  ><a href="#">어학</div></a>
+                    <div class="club_hastag_01" > <a href="#">고시</div></a> 
+                    <div class="club_hastag_01" > <a href="#">공무원</div></a> 
+                    <div class="club_hastag_01" > <a href="#">취미</div></a>
+                    <div class="club_hastag_01" ><a href="#">프로그래밍</div></a><br>
+                    <div class="club_hastag_01" > <a href="#">교양</div></a>
+                    <div class="club_hastag_01" ><a href="#">전공</div></a>
+                    <div class="club_hastag_01" > <a href="#">창업</div></a>
+                    <div class="club_hastag_01" > <a href="#">취미</div></a>
+                    <div class="club_hastag_01" > <a href="#">기타</div></a> 
+                </div>
+
+                <!--스터디정보-->
+                <div class="club_info" style="margin-top: 130px;">
+                    <span style="font-weight: bold; font-size: 36px;" >스터디</span>
+
+                        <div class="click">
+          <input type="radio" id="new" name="click" value="new"
+                 checked>
+          <label for="new">인기순</label>
+
+          <input type="radio" id="hot" name="click" value="hot">
+          <label for="hot">최신순</label>
+
+          <input type="radio" id="hot" name="click" value="end">
+          <label for="end">마감임박순</label>
+         </div>
+
+                </div>
+                <!--스터디카드-->
+                <div class="study_content">
+                <div class="study_box"> <a href="./스터디 상세페이지.html">
+                    <div class="study_img"><img src="./img/스터디/unity3D.jpg" width="236px" height="175px" class="study_box-image"></div>
+                    <div class="study_text">
+                        <div class="study_group">
+                        <div class="study_hastag">공기업면접</div>
+                        <p class="study_title">게임 개발 같이 하실분 연락주세요~</p>
+                        <div class="study_text_sub">
+                        <p style="font-size: 14px; margin-bottom: 40px;">게임 개발 프로젝트 진행하려고 합니다. 관심있는 분은 연락주세요~!
+                             <br>여기와서 같이 개발해나가요 :) </p>
+                    </div>
+                </div>
+                    <div class="study_notice">
+                        <p style="line-height: 0.8;"><span class="study_member">인원</span> 2명</p>
+                        <p style="line-height: 0.8;"><span class="study_member">장소</span> 정왕 투썸플레이스</p>
+                        <p style="line-height: 0.8;"><span class="study_member">방법</span> 오프라인</p>
+                        <p style="line-height: 0.8;"><span class="study_member">기간</span> 3개월</p>
+                    </div>
+                       </div>       
+                </div>
+                </a></a>
+                <div class="study_box"> <a href="./스터디 상세페이지.html">
+                    <div class="study_img"><img src="./img/스터디/XD.jpg" width="236px" height="175px" class="study_box-image"></div>
+                    <div class="study_text">
+                        <div class="study_group">
+                        <div class="study_hastag">디자인</div>
+                        <p class="study_title">XD 디자인 툴 같이 공부하실 분 구합니다~!</p>
+                        <div class="study_text_sub">
+                        <p style="font-size: 14px; margin-bottom: 40px;">미디어디자인공학과 중에 디자인 툴 같이 공부하실 분 있으신가요? 
+                             <br>편입생인데 새로운 툴들을 너무 많이 배워서 예습 하려구요. </p>
+                    </div>
+                </div>
+                    <div class="study_notice">
+                        <p style="line-height: 0.8;"><span class="study_member">인원</span> 2명</p>
+                        <p style="line-height: 0.8;"><span class="study_member">장소</span> 정왕 투썸플레이스</p>
+                        <p style="line-height: 0.8;"><span class="study_member">방법</span> 오프라인</p>
+                        <p style="line-height: 0.8;"><span class="study_member">기간</span> 3개월</p>
+                    </div>
+                       </div>       
+                </div>
+                </a></a>
+                <div class="study_box"> <a href="./스터디 상세페이지.html">
+                    <div class="study_img"><img src="./img/스터디/Excel.jpg" width="236px" height="175px" class="study_box-image"></div>
+                    <div class="study_text">
+                        <div class="study_group">
+                        <div class="study_hastag">자격증</div>
+                        <p class="study_title">엑셀 실무 공부해서 자격증 같이 취득해요!</p>
+                        <div class="study_text_sub">
+                        <p style="font-size: 14px; margin-bottom: 40px;">취업준비 하는 학생인데 자격증이 몇개 없어서 참 고민이네요ㅠㅠ.
+                             <br>엑셀 같이 공부해서 취뽀하실 분 있으실까요? </p>
+                    </div>
+                </div>
+                    <div class="study_notice">
+                        <p style="line-height: 0.8;"><span class="study_member">인원</span> 2명</p>
+                        <p style="line-height: 0.8;"><span class="study_member">장소</span> 정왕 투썸플레이스</p>
+                        <p style="line-height: 0.8;"><span class="study_member">방법</span> 오프라인</p>
+                        <p style="line-height: 0.8;"><span class="study_member">기간</span> 3개월</p>
+                    </div>
+                       </div>       
+                </div>
+                </a></a>
+                <div class="study_box"> <a href="./스터디 상세페이지.html">
+                    <div class="study_img"><img src="./img/스터디/interview.jpg" width="236px" height="175px" class="study_box-image"></div>
+                    <div class="study_text">
+                        <div class="study_group">
+                        <div class="study_hastag">취업준비</div>
+                        <p class="study_title">게임 개발 같이 하실분 연락주세요~</p>
+                        <div class="study_text_sub">
+                        <p style="font-size: 14px; margin-bottom: 40px;">취업 면접 대비해서 같이 준비해요! 부담없이 같이 열심히 해봐요!!
+                             <br>면접 대비 질문 같이 예상해봐요:) </p>
+                    </div>
+                </div>
+                    <div class="study_notice">
+                        <p style="line-height: 0.8;"><span class="study_member">인원</span> 2명</p>
+                        <p style="line-height: 0.8;"><span class="study_member">장소</span> 정왕 투썸플레이스</p>
+                        <p style="line-height: 0.8;"><span class="study_member">방법</span> 오프라인</p>
+                        <p style="line-height: 0.8;"><span class="study_member">기간</span> 3개월</p>
+                    </div>
+                       </div>       
+                </div>
+                </a></a>
+                <div class="study_box"> <a href="./스터디 상세페이지.html">
+                    <div class="study_img"><img src="./img/스터디/Kotlin.jpg" width="236px" height="175px" class="study_box-image"></div>
+                    <div class="study_text">
+                        <div class="study_group">
+                        <div class="study_hastag">개발스터디</div>
+                        <p class="study_title">알고리즘 언어로 코틀린 스터디 하실 분 구합니다.</p>
+                        <div class="study_text_sub">
+                        <p style="font-size: 14px; margin-bottom: 40px;">안드로이드 어플 제작하며 공부해요! 코틀린으로 만들 예정입니다!
+                             <br>못해도 상관없습니다. 같이 하면서 배워요! </p>
+                    </div>
+                </div>
+                    <div class="study_notice">
+                        <p style="line-height: 0.8;"><span class="study_member">인원</span> 2명</p>
+                        <p style="line-height: 0.8;"><span class="study_member">장소</span> 정왕 투썸플레이스</p>
+                        <p style="line-height: 0.8;"><span class="study_member">방법</span> 오프라인</p>
+                        <p style="line-height: 0.8;"><span class="study_member">기간</span> 3개월</p>
+                    </div>
+                       </div>       
+                </div>
+                </a></a>
+    <div class="page_number"> 
+                    <a href="#" style="color: #3399FF;">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">></a>
+                </div>
+                </div>  
+            </article>
+             <!--푸터--> 
+             <footer> 
+                <div class="footer"> 
+                        <div class="footer_img">
+                            <img src="./img/logo/logo02.png" alt="" style="width: 270px; height: 55px;">
+                        </div>
+                        <div class="footer_info" style="width: 80%;">
+                        개인정보처리방침 | 개인정보 목적외 이용·제공대장 | 정보보호실천수칙 | 정보공개 | 대학정보공시 | 원격지원
+                         <br> 
+                        <P>15073 경기도 시흥시 산기대학로 237 (정왕동) 한국산업기술대학교 대표전화 031-8041-1000 입학안내 1599-2036 <br>
+                    COPYRIGHT 2014 KOREA POLYTECHNIC UNIVERSITY. ALL RIGHTS RESERVED.webmaster@kpu.ac.kr</P>
+                        </div>
+                        <div class="footer_site">
+                            <span class="footer_href">관련사이트 바로가기</span>
+                            <p>Today : 6,872<br>
+                                Total : 44,681,788</p>
+                        </div>
+                   </div>
+                </footer>  
+           
+        </body>

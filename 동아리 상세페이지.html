@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>동아리 상세페이지</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto:wght@300&family=Rokkitt:wght@500&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		font-family: 'Noto Sans KR', sans-serif;
+	}
+	        html{
+        position: relative;
+        min-height: 100%;
+        margin: 0;
+    }
+
+    body{
+    	width: 100%;
+        min-height: 100%;
+    }
+
+	a{
+		text-decoration: none;}
+		content{
+			width: 1200px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 200px;
+		}
+		/*내비게이션바*/
+	}
+		*{
+			font-family: 'Noto Sans KR', sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+        header{
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		background-color: #fff;
+    		height: 100px;
+            box-shadow: 0 4px 16px -4px #dddddd ;
+    	}
+    	nav{
+    		display: flex;
+    		justify-content: space-between;
+    		width: 1194px;
+    		padding-top: 20px;
+    	}
+    	.logo{
+    		width: 90px;
+    		height: 60px;
+    		display: flex;
+    		margin-left:0px;
+    		margin-bottom: 20px;
+    		display: flex;
+    		justify-content: space-between;
+    	}
+    	.menu{
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		text-decoration: none;
+            margin-right: 0px;
+    	}
+    	.menu li{
+    		list-style: none;
+			font-weight: medium;
+    	}
+    	.menu li a{
+    		text-decoration: none;
+    		margin-left: 30px;
+    		color: black;
+    	   padding-bottom: 4px;
+        }
+    	.menu li a:hover{
+    		color: #3399FF;
+            border-bottom: 2px solid #3399FF;
+        }
+    	
+
+		/*배너*/
+		.main{
+			width: 100%;
+			height: 548px;
+			background-color: #002333;
+		}
+		.main-info{
+			width: 1200px;
+			height: 548px;
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			vertical-align: bottom;
+		}
+		.main-img{
+			display: inline-block;
+			padding-top: 46px;
+			padding-right: 30px;
+		}
+		.main-img img{
+			border-radius: 12px;
+			width: 632px;
+			height: 455px;
+		}
+		.main-text{
+			display: inline-block;
+			padding-left: 30px;
+			vertical-align: top;
+			padding-top: 80px;
+			display: flex;
+			flex-direction: column;
+
+		}
+		.main-text h2{
+			font-size: 36px;
+			font-weight: bold;
+			color: #ffffff;
+			margin: 0;
+		}
+		.text-sub{
+			margin-top: 40px;
+			margin-bottom: 32px;
+		}
+		.text-sub h3{
+			color: #ffffff;
+			display: inline-block;
+			font-size: 18px;
+			margin-right: 20px;
+			margin-top: 6px;
+			margin-bottom: 6px;
+		}
+		.text-sub p{
+			color: #F5f5f5;
+			display: inline-block;
+			font-size: 16px;
+			margin-top: 12px;
+			margin-bottom: 12px;
+		}
+
+		.text-button {
+			width: 376px;
+			height: 53px;
+			border: solid 1px #006CFF;
+			background-color: #006CFF;
+			margin: 0;
+			margin-top: 20px;
+			color: #ffffff;
+			font-size: 18px;
+			font-weight:; 
+			display: inline-block;
+			text-align: center;
+			text-decoration: none;
+			margin-top: 16px;
+			line-height: 50px;
+		}
+
+		.text-button:hover{
+			color: #fff;
+			background-color: #004bb1;
+			border: solid 1px #004bb1;
+		}
+		/*작은내비바*/
+		.navi{
+			
+			height: 70px;
+			list-style: none;
+			display: flex;
+			justify-content: center;
+			border-bottom: 1px solid #E0E0E0;
+		}
+
+		.navi a{
+			display: flex;
+			flex-basis: 200px;
+			text-decoration: none;
+			color: #333;
+			font-size: 20px;
+			font-weight: 300;
+			margin-left: 28px;
+			margin-right: 28px;
+			margin-bottom: 0;
+			line-height: 70px;
+		}
+		.navi li a:hover {
+			color: #3399FF;
+			border-bottom: 2px solid #3399FF;
+		}
+
+		.one{
+			 border-bottom: 2px solid #3399FF; 
+		}
+
+
+		/*프로그램 정보*/
+		.info{
+			width: 1200px;
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: 60px;
+		}
+		.info .info-desc{
+			margin-top: 60px;
+		}
+		.info .info-desc p{
+			font-size: 18px;
+			margin-top: 64px;
+			margin-bottom: 0;
+		}
+		/*프로그램 후기*/
+		.info-comment{
+			margin-top: 180px;
+			width: 1200px;
+		}
+		.info-comment-desc{
+			display: flex;
+			justify-content: space-around;
+			margin-top: 36px;
+		}
+		.info-comment .info-comment-title{
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			border-bottom: 1px solid #BDBDBD;
+			padding-bottom: 16px;
+		}
+		.info-comment .info-comment-title h2{
+			font-size: 36px;
+			margin: 0;
+			font-weight: 400;
+			color: #2C2C2C;
+		}
+		.info-comment .info-comment-title h3{
+			font-size: 20px;
+			font-weight: 400;
+			border: 1px solid #3399FF;
+			background-color: #3399FF;
+			border-radius: 24px;
+			padding: 8px 20px;
+			margin: 0;
+		}
+
+		.info-comment-title h3:hover{
+			background-color: #004bb1;
+			border: 1px solid #004bb1;
+		}
+
+		
+		.info-comment .info-comment-title a{
+			text-decoration: none;
+			display: inline-block;
+			color: #fff;
+		}
+		.info-comment-desc .profile-img{
+			width: 72px;
+			height: 72px;
+			border: 1px solid #E0E0E0;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+		.profile-img .user-img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.profile-text{
+			display: flex;
+			flex-direction: column;
+		}
+		.profile-text h4{
+			font-size: 16px;
+			font-weight: 400;
+			margin: 0;
+		}
+		.profile-text .profile-star{
+			color: #FFD600;
+			margin-top: 8px;
+			margin-bottom: 8px;
+		}
+		.profile-text .profile-star span{
+			color: #9E9E9E;
+		}
+		.profile-text #time{
+			margin: 0;
+			font-size: 14px;
+			color: #9E9E9E;
+		}
+		.profile-text p{
+			width: 1080px;
+			margin-top: 10px;
+			margin-left: 0;
+			margin-bottom: 0;
+			font-size: 18px;
+			color: #616161;
+		}
+        .page_number{
+            text-align: center;
+            margin-top: 100px;
+            margin-bottom: 150px;
+        }
+        .page_number a{
+        text-decoration: none;
+        font-size: 24px;
+        color: #333;
+        font-weight: normal;
+        margin-left: 6px;
+        padding: 5px;
+        }
+		 
+		 .page_number a:hover{
+            font-weight: 500;
+           color: #3399FF;
+        }
+		#menu{
+			list-style: none;
+			text-align: center;
+		}
+		#menu li{
+			display: inline-block;
+			font-size: 20px;
+			margin-right: 16px;
+			font-weight: 300;
+		}
+		.number #now_page{
+			font-weight: bold;
+		}
+		/*프로그램 추천*/
+		.info-recommend{
+			width: 1200px;
+			margin-top: 160px;
+			margin-bottom: 400px;
+		}
+		.info-recommend .info-recommend-title{
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			border-bottom: 1px solid #BDBDBD;
+			padding-bottom: 16px;
+		}
+		.info-recommend .info-recommend-title h2{
+			font-size: 36px;
+			font-weight: 400;
+			color: #2C2C2C;
+			margin: 0;
+		}
+		.info-recommend .info-recommend-title h3{
+			font-size: 24px;
+			font-weight: 400;
+			margin: 0;
+			display: inline-block;
+		}
+		
+		.info-recommend .info-recommend-title a{
+			text-decoration: none;
+			color: #2C2C2C;
+		}
+		.info-recommend-card{
+			display: flex;
+			justify-content: space-between;
+			margin-top: 36px;
+		}
+
+		.club_box{
+			display: block;
+			width: 580px;
+			height: 270px;
+			box-shadow: 8px 8px 20px 0 rgba(0,0,0,0.25);
+			border-radius: 10px;
+			margin-bottom: 24px;
+
+			transition: 0.2s;
+		}
+
+        .club_box:hover{
+
+            opacity: 0.6;
+        }
+		.box-image{
+			width: 276px;
+			height:270px;
+			object-fit: cover;
+			border-radius: 10px 0 0 0;	
+		}
+		.club_text{
+			margin-left: 28px;
+			margin-right: 28px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            float: left;
+            
+		}
+		.club_text .club_title{
+			display: block;
+			font-size: 18px;
+			font-weight: bold;
+			color: #2C2C2C;
+			margin-top: 24px;
+			margin-bottom: 12px;
+		}
+        .club_text .club_hastag{
+            color: #66B9FF;
+            font-size: 14px;
+        }
+		.club_text_sub{
+			margin-bottom: 12px;
+		}
+		.club_text_sub_bottom{
+			text-decoration: none;
+			margin-left: 8px;
+			color: #BDBDBD;
+			font-size: 16px;
+			font-weight: 500;
+		}
+		.club_img{
+            width: 276px;
+            height: 270px;
+            float: left;
+        }
+        .club_icon_2{
+            color: #424242;
+            font-size: 14px;
+        }
+		/*푸터*/
+
+ .footer{
+        width: 100%;
+        height: 200px;
+        background-color: black;
+        text-align: left;
+        color: #F5F5F5;
+        display: flex;
+        position: fixed;
+        font-size: 16px;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+
+        }
+        .footer_img{
+            display: flex;
+            margin-left: 265px;
+            margin-top: 65px;
+        }
+        .footer_info{
+            margin-left: 68px;
+            padding-top: 54px;
+            margin-bottom: 50px;
+        }
+        .footer_href{
+            display: flex;
+            flex-wrap: nowrap;
+            width: 175px;
+           /* height: 35px;*/
+            border: #F5F5F5 solid 1px;
+            padding: 9px 15px;
+        }
+        .footer_site{
+            width: 303px;
+            height: 95px;
+            margin-top: 52px;
+            margin-right: 300px;
+             margin-left: 20px;
+        }
+
+
+               #footer_today{
+            margin-top: 10px;
+
+        }
+	</style>
+</head>
+<body>
+
+	<!--내비게이션바-->
+	<header> 
+        <nav> 
+            <a href="./index.html"><img class="logo" src="./img/logo/logo.jpg" width="140px" height="50px" ></a>
+            <ul class="menu"> 
+                <li><a href="./비교과.html">비교과</a></li>
+                        <li><a href="./동아리.html"><span style="font-weight: bold; color: #3399FF; ">동아리</span></a></li>
+                        <li><a href="./스터디.html">스터디</a></li>
+                        <li><a href="./커뮤니티.html">커뮤니티</a></li>
+                        <li><a href="./마이페이지.html">마이페이지</a></li>
+            </ul>
+        </nav>
+    </header>
+
+	<!--배너-->
+	<content>
+	<div class="main">
+		<div class="main-info">
+			<div class="main-img"><img src="https://i.postimg.cc/wMfd4WFc/image-91.jpg"></div>
+			<div class="main-text">
+				<h2>위너스</h2>
+				
+				<div class="text-sub">
+					<h3>대상학과</h3><p>전체</p><br>
+					<h3>대상학년</h3><p>1~3학년</p><br>
+					<h3>모집인원</h3><p>18명</p><br>
+					<h3>모집기간</h3><p>상시모집</p><br>
+					<h3>장소&ensp;&ensp;&ensp;&ensp;</h3><p>운동장</p><br>
+				</div>
+				<a href="#" class="text-button">신청하기</a>
+			</div>
+		</div>	
+	</div>
+	<!--작은내비바-->
+	<ul class="navi">
+               <li><a class="one" href="#"><span style="font-weight: bold; color: #3399FF;">동아리 소개</span></a></li>
+               <li><a href="#">동아리 활동 사진</a></li>
+               <li><a href="#">프로그램 후기</a></li>
+               <li><a href="#">비슷한 활동</a></li>
+            </ul>
+
+	<!--프로그램정보-->
+	<div class="info">
+		<div class="info-desc">
+			<div class="info-graph"><img src="https://i.postimg.cc/rsdhcQM9/Rectangle-129.jpg"></div>
+			<p>
+			2021년 위너스가 함께할 신입부원을 모집하고 있습니다!🎉🎉<br>
+			<br>
+			⚾선수 : 야구에 관심많고 연습과 경기를 뛰고싶으신 분<br>
+			⚾매니저 : 야구장 직관 & MT등 다양한 친목 활동<br>
+			<br>
+			지원방법은 맨 밑에 있는 연락처로 연락 주시면 안내드리겠습니다 🤗😀<br>
+			<br>
+			궁금한점 및 문의사항은 아래 연락처로 문의 주세요!<br>
+			🏅회장 한재현 : 010-3448-5948<br>
+			🏅감독 왕승현 : 010-4504-5826<br>
+			<br>
+			페이스북 페이지 KPU WINNERS<br>
+			인스타그램 @kpu_winners</p>
+		</div>
+		<!--프로그램 후기-->
+		<div class="info-comment">
+			<div class="info-comment-title">
+				<h2>동아리 후기</h2>
+				<a class="post" href="#"><h3>댓글남기기</h3></a>
+			</div>
+
+			<div class="info-comment-desc">
+				<div class="profile-img">
+					<img src="https://i.postimg.cc/dtRFzhC7/image-10.png" class="user-img">
+				</div>
+				<div class="profile-text">
+					<h4>김도현</h4>
+					<div class="profile-star">&#x02605;&#x02605;&#x02605;&#x02605;&#x02605;</div>
+					<p id="time">2021-12-18 21:04:23</p>
+					<p>선후배님들과 함께 즐거운 야구 게임하니 재밌고 좋습니다.</p>
+				</div>
+			</div>
+			<div class="info-comment-desc">
+				<div class="profile-img">
+					<img src="https://i.postimg.cc/Zq2X9m3t/image-9.png" class="user-img">
+				</div>
+				<div class="profile-text">
+					<h4>전은경</h4>
+					<div class="profile-star">&#x02605;&#x02605;&#x02605;<span>&#x02605;&#x02605;</span></div>
+					<p id="time">2021-12-15 13:24:55</p>
+					<p>야구장 직관 좀 많이 갔으면 좋겠습니다!</p>
+				</div>
+			</div>			
+			<div class="info-comment-desc">
+				<div class="profile-img">
+					<img src="https://i.postimg.cc/BZxRvdnk/image-11.png" class="user-img">
+				</div>
+				<div class="profile-text">
+					<h4>이수진</h4>
+					<div class="profile-star">&#x02605;&#x02605;&#x02605;&#x02605;<span>&#x02605;</span></div>
+					<p id="time">2021-12-13 15:32:56</p>
+					<p>체계적으로 운영하고 있어 좋은 동아리라고 생각합니다.</p>
+				</div>
+			</div>
+			<div class="number">
+				<div class="number_info">
+			    <div class="page_number"> 
+                    <a href="#" style="color: #3399FF;">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">></a>
+                </div>
+				</div>	
+			</div>	
+		</div>
+		<!--프로그램 추천-->
+		<div class="info-recommend">
+			<div class="info-recommend-title">
+				<h2>이런 활동은 어떠세요🤔?</h2>
+				<h3><a href="#">더보기 &gt;</a></h3>
+			</div>
+			<div class="info-recommend-card">
+				<a href="#">
+			        <div class="club_box">
+			            <div class="club_img"><img src="https://i.postimg.cc/zf3v5cVM/Mask-Group.jpg" width="276px" height="100%" class="box-image"></div>
+			            <div class="club_text">
+			                <p class="club_hastag">#음악/공연동아리</p>
+			                <p class="club_title">버스킹 동아리 '소리새'</p>
+			                <div class="club_text_sub">
+			                <img src="https://i.postimg.cc/PJ5FFY6m/stars.jpg" alt=""><span class="club_text_sub_bottom"><span style="color: #424242;" >3.0</span>/5.0</span>
+			                <p style="font-size: 14px; margin-bottom: 32px; color: black;">한국산업기술대학교의 <br>인디밴드입니다~</p>
+			                <div class="club_icon_2"><img src="https://i.postimg.cc/rmFJ8cST/location.png" alt="" style="margin-right: 4px;">종합관 1층 104호</div>
+			            </div>
+			            </div> 
+			        </div>
+			    </a>      
+				<a href="#">		    
+			        <div class="club_box">
+			            <div class="club_img"><img src="https://i.postimg.cc/nVqzH7hH/Mask-Group2.jpg" width="276px" height="100%" class="box-image"></div>
+			            <div class="club_text">
+			                <p class="club_hastag">#학술동아리</p>
+			                <p class="club_title">공모전 동아리 '슈어'</p>
+			                <div class="club_text_sub">
+			                <img src="https://i.postimg.cc/PJ5FFY6m/stars.jpg" alt=""><span class="club_text_sub_bottom"><span style="color: #424242;" >3.0</span>/5.0</span>
+			                <p style="font-size: 14px; margin-bottom: 32px; color: black;">공모전을 원한다면 <br>이곳으로 얼른 가입하세요!</p>
+			                <div class="club_icon_2"><img src="https://i.postimg.cc/rmFJ8cST/location.png" alt="" style="margin-right: 4px;">종합관 3층 302호</div>
+			            </div>
+			            </div> 
+			        </div>  
+			    </a>
+			</div>
+		</div>
+	</div>
+	</content>
+	<!--푸터-->
+	<footer> 
+        <div class="footer"> 
+            <div class="footer_img">
+                <img src="https://i.postimg.cc/XJDTWZS9/logo02-png.png" alt="" style="width: 270px; height: 55px;">
+            </div>
+            <div class="footer_info" style="width: 80%;">
+                    개인정보처리방침 | 개인정보 목적외 이용·제공대장 | 정보보호실천수칙 | 정보공개 | 대학정보공시 | 원격지원
+                     <br> 
+                    <P>15073 경기도 시흥시 산기대학로 237 (정왕동) 한국산업기술대학교 대표전화 031-8041-1000 입학안내 1599-2036 <br>
+                COPYRIGHT 2014 KOREA POLYTECHNIC UNIVERSITY. ALL RIGHTS RESERVED.webmaster@kpu.ac.kr</P>
+            </div>
+            <div class="footer_site">
+                        <span class="footer_href">관련사이트 바로가기</span>
+                        <p>Today : 6,872<br>
+                            Total : 44,681,788</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
