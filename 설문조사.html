@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>설문조사</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<style type="text/css">
+		*{
+			font-family: 'Noto Sans KR', sans-serif;
+			margin: 0;
+			padding: 0;	
+     		box-sizing: border-box;
+		}
+
+			        html{
+        position: relative;
+        min-height: 100%;
+        margin: 0;
+    }
+
+    body{
+        min-height: 100%;
+    }
+	
+		/*header*/
+		header{
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		background-color: #fff;
+    		height: 100px;
+            box-shadow: 0 4px 16px -4px #dddddd ;
+    	}
+    	nav{
+    		display: flex;
+    		justify-content: space-between;
+    		width: 1194px;
+
+    	}
+    	.logo{
+    		width: 90px;
+    		height: 60px;
+    		display: flex;
+    		margin-left:0px;
+    		display: flex;
+    		justify-content: space-between;
+    	}
+    	.menu{
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		text-decoration: none;
+            margin-right: 0px;
+    	}
+    	.menu li{
+    		list-style: none;
+			font-weight: medium;
+    	}
+    	.menu li a{
+    		text-decoration: none;
+    		margin-left: 30px;
+    		color: black;
+    	   padding-bottom: 4px;
+        }
+    	.menu li a:hover{
+    		color: #3399FF;
+            border-bottom: 2px solid #3399FF;
+        }
+
+/*=---------------------------------------------------네비*/
+		.table_title{
+			width: 1193px;
+			text-align: left;
+			margin:160px auto 60px auto;
+		}
+		.table_title h1{
+				font-size: 36px;
+				font-weight: 700;
+				display: flex;
+				width:auto;
+				height: 50px;
+
+		}
+
+		button{
+			width: 144px;
+			height: 49px;
+			text-align: center;
+			background-color: #F5F5F5;
+			color: #3399FF;
+			border: none;
+			font-size: 18px;
+		}
+
+
+
+		button {cursor: pointer;}
+
+				button:hover{
+			background-color: #3399FF;
+			color: #fff;
+		}
+
+		.btn2{
+			width: 144px;
+			height: 49px;
+			text-align: center;
+			background-color: #3399FF;
+			color: white;
+			border: none;
+			font-size: 18px;
+		}
+		
+		table {
+	    	border-spacing: 0px;
+	   		border-style: none;
+	  		padding: 0px;
+	  		width: 1193px;
+	  		margin: auto;
+			}
+
+		td {
+  			border-spacing: 0px;
+   		 	border-style: none;
+   		 	padding: 0px;
+   		}
+
+
+		/*표 감싸는 div*/
+		.board_list_wrap{
+			margin-bottom: 400px;
+
+		}
+		/*표*/
+		.board_list{
+				width: 1193px;
+				font-size: 18px;
+         margin-bottom:107px;
+		}
+
+		.board_list th{
+
+			padding: 23px 10px 23px 10px;
+			background-color:#3399FF;
+			color: white;
+
+		}
+		.board_list td{
+			padding: 28px 10px 28px 10px;
+			border-bottom: 1px solid #757575; 
+			text-align: center;
+		}
+		.board_list td h1{
+			font-size: 14px;
+			font-weight: 300;
+		}
+		.board_list td h2{
+			font-size: 18px;
+			font-weight: 700;
+		}
+		.board_list img {
+			width: 170px;
+			height: 100px;
+			border-radius: 5px;
+		}
+		.program{
+			height:100px;
+			width:368px;
+			display: flex;
+			align-items:center;
+			text-align: left;
+			margin: auto;
+		}
+		.content{
+			margin-left: 20px;
+		}
+
+
+		.arrow{
+		  display:flex;
+		  align-items:center;
+		  justify-content:center;
+		  width:41px;
+		  height:52px;
+		  transform: rotate(180deg);
+		}
+
+		.arrow img{
+		  display:flex;
+		  width:14px;
+		  height:14px;
+		}
+/*푸터*/
+ .footer{
+        width: 100%;
+        height: 200px;
+        background-color: black;
+        text-align: left;
+        color: #F5F5F5;
+        display: flex;
+        position: fixed;
+        font-size: 16px;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+
+        }
+        .footer_img{
+            display: flex;
+            margin-left: 265px;
+            margin-top: 65px;
+        }
+        .footer_info{
+            margin-left: 68px;
+            padding-top: 54px;
+            margin-bottom: 50px;
+        }
+        .footer_href{
+            display: flex;
+            flex-wrap: nowrap;
+            width: 175px;
+           /* height: 35px;*/
+            border: #F5F5F5 solid 1px;
+            padding: 9px 15px;
+        }
+        .footer_site{
+            width: 303px;
+            height: 95px;
+            margin-top: 52px;
+            margin-right: 300px;
+             margin-left: 20px;
+        }
+	</style>
+</head>
+<body>
+		<header> 
+                <nav> 
+                <a href="./index.html"><img class="logo" src="./img/logo/logo.jpg" width="140px" height="50px" ></a>
+                    <ul class="menu"> 
+                 <li><a href="./비교과.html">비교과</a></li>
+                <li><a href="./동아리.html">동아리</a></li>
+                <li><a href="./스터디.html" >스터디</a></li>
+                <li><a href="./커뮤니티.html">커뮤니티</a></li>
+                <li><a href="./마이페이지.html" id="now-title"><span style="font-weight: bold; color: #3399FF; ">마이페이지</span></a></li>
+                    </ul>
+                </nav>
+            </header>
+
+
+	<div class="table_title">
+			<h1><div class="arrow"><a href="마이페이지.html" target="_blank">
+	<img src="https://i.postimg.cc/HnRP0zB1/arrow.png" >
+</a></div>수강 프로그램 설문조사</h1>
+		</div>
+
+	<div class="board_list_wrap">
+		<table class="board_list">
+		
+		<!--테이블 헤더!-->
+		<thead>
+			<tr>
+				<th>번호</th>
+				<th>프로그램</th>
+				<th>승인여부</th>
+				<th>수강기간</th>
+				<th>신청기간</th>
+				<th>사후설문</th>
+			</tr>
+		</thead>
+		<!--테이블 바디!-->
+		<tbody>
+
+			<tr>
+				<td>1</td>
+				<td><div class="program">
+							<div class="program_img"><img src="https://i.postimg.cc/Pqn9jBxz/image.png"></div>
+							<div class="content"><h1>취업개발팀</h1><h2>웹 개발자 취준백서</h2></div>
+						</div>
+				</td>
+				<td>승인</td>		
+				<td>21.09.11<br>~21.10. 22</td>
+				<td>2021.12.13</td>
+				<td><button type ="button" onclick = "location.href = '#' ">설문하기</button></td>
+			</tr>
+
+			<tr>
+				<td>2</td>
+				<td><div class="program">
+							<div class="program_img"><img src="https://i.postimg.cc/v8cz8N1P/image-55.png"></div>
+							<div class="content"><h1>디자인공학과</h1><h2>입문자를 위한 HTML 기초 강의</h2></div>
+						</div>
+				</td>
+				<td>승인</td>		
+				<td>21.09.11<br>~21.10. 22</td>
+				<td>2021.12.13</td>
+				<td><button type ="button" onclick = "location.href = '#' ">설문하기</button></td>
+			</tr>
+
+			<tr>
+				<td>3</td>
+				<td><div class="program">
+							<div class="program_img"><img src="https://i.postimg.cc/8k9b7mMT/image-64.png"></div>
+							<div class="content"><h1>미디어공학과</h1><h2>입문자를 위한 CSS<br>기초 강의</h2></div>
+						</div>
+				</td>
+				<td>승인</td>		
+				<td>21.09.11<br>~21.10. 22</td>
+				<td>2021.12.13</td>
+				<td><button type ="button" onclick = "location.href = '#' ">설문하기</button></td>
+			</tr>
+
+			<tr>
+				<td>4</td>
+				<td><div class="program">
+							<div class="program_img"><img src="https://i.postimg.cc/pXjJz5Jz/image-65-1.png"></div>
+							<div class="content"><h1>게임공학과</h1><h2>유니티로 배우는 게임 프로그래밍 기초</h2></div>
+						</div>
+				</td>
+				<td>승인</td>		
+				<td>21.09.11<br>~21.10. 22</td>
+				<td>2021.12.13</td>
+				<td><button type ="button" onclick = "location.href = '#' ">설문하기</button></td>
+			</tr>
+
+			<tr>
+				<td>5</td>
+				<td><div class="program">
+							<div class="program_img"><img src="https://i.postimg.cc/HnyMqDrh/image-65-2.png"></div>
+							<div class="content"><h1>취업개발팀</h1><h2>시선을 사로잡는 웹<br>초급</h2></div>
+						</div>
+				</td>
+				<td>승인</td>		
+				<td>21.09.11<br>~21.10. 22</td>
+				<td>2021.12.13</td>
+				<td><button type ="button" onclick = "location.href = '#' ">설문하기</button></td>
+			</tr>
+
+			<tr>
+				<td>6</td>
+				<td><div class="program">
+							<div class="program_img"><img src="https://i.postimg.cc/ThvbG7mY/image-66-1.png"></div>
+							<div class="content"><h1>국제교류팀</h1><h2>주석 데이터 수집 및<br>관리</h2></div>
+						</div>
+				</td>
+				<td>승인</td>		
+				<td>21.09.11<br>~21.10. 22</td>
+				<td>2021.12.13</td>
+				<td><button type ="button" onclick = "location.href = '#' ">설문하기</button></td>
+			</tr>
+
+			<tr>
+				<td>7</td>
+				<td><div class="program">
+							<div class="program_img"><img src="https://i.postimg.cc/L6kvGZgR/image-55.png"></div>
+							<div class="content"><h1>디자인공학과</h1><h2>일러스트레이터 강좌<br>기본 도구 설명편</h2></div>
+						</div>
+				</td>
+				<td>승인</td>		
+				<td>21.09.11<br>~21.10. 22</td>
+				<td>2021.12.13</td>
+				<td><button type ="button" onclick = "location.href = '#' ">설문하기</button></td>
+			</tr>
+
+			<tr>
+				<td>8</td>
+				<td><div class="program">
+							<div class="program_img"><img src="https://i.postimg.cc/7ZxX4YSz/image-64.png"></div>
+							<div class="content"><h1>디자인공학과</h1><h2>포토샵 강좌<br>기본 도구 설명편</h2></div>
+						</div>
+				</td>
+				<td>승인</td>		
+				<td>21.09.11<br>~21.10. 22</td>
+				<td>2021.12.13</td>
+				<td><button class="btn2" type ="button" onclick = "location.href = '#' ">설문완료</button></td>
+			</tr>
+
+			<tr>
+				<td>9</td>
+				<td><div class="program">
+							<div class="program_img"><img src="https://i.postimg.cc/g2Ns2FKT/image-65.png"></div>
+							<div class="content"><h1>취업개발팀</h1><h2>데이터 분석 전문가<br>자격증 강의</h2></div>
+						</div>
+				</td>
+				<td>승인</td>		
+				<td>21.09.11<br>~21.10. 22</td>
+				<td>2021.12.13</td>
+				<td><button class="btn2" type ="button" onclick = "location.href = '#' ">설문완료</button></td>
+			</tr>
+
+			<tr>
+				<td>10</td>
+				<td><div class="program">
+							<div class="program_img"><img src="https://i.postimg.cc/nLrksRRc/image-66.png"></div>
+							<div class="content"><h1>취업개발팀</h1><h2>파이널 컷 프로 강의</h2></div>
+						</div>
+				</td>
+				<td>승인</td>		
+				<td>21.09.11<br>~21.10. 22</td>
+				<td>2021.12.13</td>
+				<td><button type class="btn2" ="button" onclick = "location.href = '#' ">설문완료</button></td>
+			</tr>
+
+
+				</tbody>
+			</table>
+		</div>
+
+            <footer> 
+                <div class="footer"> 
+                    <div class="footer_img">
+                        <img src="https://i.postimg.cc/tJWfNT44/logo02.png" alt="" style="width: 270px; height: 55px;">
+                    </div>
+                    <div class="footer_info" style="width: 80%;">
+                    개인정보처리방침 | 개인정보 목적외 이용·제공대장 | 정보보호실천수칙 | 정보공개 | 대학정보공시 | 원격지원
+                     <br> 
+                    <P>15073 경기도 시흥시 산기대학로 237 (정왕동) 한국산업기술대학교 대표전화 031-8041-1000 입학안내 1599-2036 <br>
+                COPYRIGHT 2014 KOREA POLYTECHNIC UNIVERSITY. ALL RIGHTS RESERVED.webmaster@kpu.ac.kr</P>
+                    </div>
+                    <div class="footer_site">
+                        <span class="footer_href">관련사이트 바로가기</span>
+                        <p class="footer_margin">Today : 6,872<br>
+                            Total : 44,681,788</p>
+                    </div>
+               </div>
+            </footer>
+</body>
+</html>
